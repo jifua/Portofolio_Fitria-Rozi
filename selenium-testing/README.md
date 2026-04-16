@@ -74,4 +74,4 @@ Menggunakan explicit wait untuk menangani dynamic element sehingga meningkatkan 
 
 ## 👩‍💻 Author
 Fitria Rozi  
-LinkedIn: https://www.linkedin.com/in/fitria-rozi
+LinkedIn: www.linkedin.com/in/fitria-rozi-6a344a1b1
