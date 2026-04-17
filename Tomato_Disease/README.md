@@ -282,6 +282,9 @@ Insight:
 # 👨‍💻 AUTHOR
 
 Fitria Rozi
-LinkedIn: www.linkedin.com/in/fitria-rozi-6a344a1b1
+
+LinkedIn : www.linkedin.com/in/fitria-rozi-6a344a1b1
+
+
 ---
 
