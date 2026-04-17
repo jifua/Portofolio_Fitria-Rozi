@@ -76,6 +76,7 @@ PTF_DATA_ANALYSIS/
 
 **Insight:**
 Sebagian besar produk berada pada rentang harga rendah hingga menengah, dengan beberapa outlier pada harga tinggi.
+
 ➡️ Harga bukan satu-satunya faktor utama dalam keputusan pelanggan.
 
 ---
@@ -86,6 +87,7 @@ Sebagian besar produk berada pada rentang harga rendah hingga menengah, dengan b
 
 **Insight:**
 Semakin tinggi rating produk, semakin tinggi kemungkinan produk direkomendasikan.
+
 ➡️ Rating merupakan faktor paling dominan dalam sistem rekomendasi.
 
 ---
@@ -96,6 +98,7 @@ Semakin tinggi rating produk, semakin tinggi kemungkinan produk direkomendasikan
 
 **Insight:**
 Sentiment review pelanggan memiliki hubungan positif dengan probabilitas rekomendasi.
+
 ➡️ Pengalaman pelanggan (customer experience) sangat berpengaruh.
 
 ---
@@ -106,6 +109,7 @@ Sentiment review pelanggan memiliki hubungan positif dengan probabilitas rekomen
 
 **Insight:**
 Brand tertentu memiliki rating konsisten tinggi yang menunjukkan tingkat kepercayaan pelanggan.
+
 ➡️ Brand dapat dijadikan indikator kualitas produk.
 
 ---
@@ -116,6 +120,7 @@ Brand tertentu memiliki rating konsisten tinggi yang menunjukkan tingkat keperca
 
 **Insight:**
 Terdapat perbedaan probabilitas rekomendasi berdasarkan musim.
+
 ➡️ Strategi marketing dapat disesuaikan dengan season.
 
 ---
@@ -126,6 +131,7 @@ Terdapat perbedaan probabilitas rekomendasi berdasarkan musim.
 
 **Insight:**
 Produk dengan harga medium hingga tinggi memiliki performa terbaik dalam rekomendasi.
+
 ➡️ Produk murah tidak selalu paling efektif.
 
 ---
@@ -136,6 +142,7 @@ Produk dengan harga medium hingga tinggi memiliki performa terbaik dalam rekomen
 
 **Insight:**
 Produk dengan kombinasi rating tinggi dan sentiment positif memiliki performa terbaik.
+
 ➡️ Produk ini layak diprioritaskan dalam campaign.
 
 ---
@@ -148,7 +155,8 @@ Produk dengan kombinasi rating tinggi dan sentiment positif memiliki performa te
 
 * Rating dan sentiment memiliki korelasi kuat terhadap rekomendasi
 * Harga memiliki pengaruh yang relatif kecil
-  ➡️ Fokus bisnis sebaiknya pada kualitas, bukan harga
+
+➡️ Fokus bisnis sebaiknya pada kualitas, bukan harga
 
 ---
 
