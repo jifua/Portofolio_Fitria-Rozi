@@ -1,19 +1,19 @@
-# 🧪 Selenium Automation Testing - Login Feature
+#  Selenium Automation Testing - Login Feature
 
-## 📌 Project Overview
+##  Project Overview
 Project ini merupakan automation testing untuk fitur login menggunakan Selenium dan Pytest.  
 Pengujian dilakukan untuk memastikan sistem dapat menangani login valid dan invalid secara benar.
 
 ---
 
-## 🎯 Objective
+##  Objective
 - Menguji fungsi login secara otomatis  
 - Memastikan validasi input berjalan dengan baik  
 - Mengurangi error pada manual testing  
 
 ---
 
-## 🧪 Test Scenarios
+##  Test Scenarios
 - ✅ Login dengan data valid → berhasil masuk  
 - ❌ Login dengan data invalid → muncul error message  
 
@@ -27,7 +27,7 @@ Pengujian dilakukan untuk memastikan sistem dapat menangani login valid dan inva
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 ```bash
 selenium-testing/
 │
@@ -39,7 +39,7 @@ selenium-testing/
 
 ---
 
-## ▶️ How to Run
+##  How to Run
 
 ### Install dependencies
 ```bash
@@ -53,19 +53,19 @@ pytest -v --html=report.html
 
 ---
 
-## 📊 Result
+##  Result
 - Total test: 2  
 - Status: PASSED ✅  
 - Report: HTML report generated  
 
 ---
 
-## 💡 Key Insight
+##  Key Insight
 Menggunakan explicit wait untuk menangani dynamic element sehingga meningkatkan stabilitas automation testing.
 
 ---
 
-## 🚀 Future Improvement
+##  Future Improvement
 - Integrasi CI/CD (GitHub Actions)  
 - Data-driven testing  
 - Cross-browser testing  
