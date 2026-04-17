@@ -124,7 +124,7 @@ Insight:
 * Akurasi tinggi pada hampir semua kelas
 * Kesalahan terjadi pada kelas dengan kemiripan visual
 
-👉 **Makna bisnis:**
+👉 **Artinya:**
 
 * Sistem cukup andal untuk penggunaan nyata
 * Namun perlu perhatian pada kasus borderline
@@ -140,7 +140,7 @@ Insight:
 * F1-score tinggi (≈ 0.97–1.00)
 * Precision & recall seimbang
 
-👉 **Makna bisnis:**
+👉 **Artinya:**
 
 * Model tidak hanya akurat, tetapi juga konsisten
 
@@ -181,7 +181,7 @@ Insight:
 * Sistem mampu memberikan hasil prediksi langsung
 * Tidak membutuhkan koneksi internet
 
-👉 **Makna bisnis:**
+👉 **Artinya:**
 
 * Cocok untuk daerah dengan keterbatasan jaringan
 
@@ -215,7 +215,7 @@ Insight:
   * Sudut kamera
   * Background
 
-👉 **Makna bisnis:**
+👉 **Artinya:**
 
 * Model perlu data real-world tambahan untuk stabilitas
 
