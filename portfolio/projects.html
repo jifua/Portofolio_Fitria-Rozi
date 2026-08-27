@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Fitria Rozi</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="dot"></span>FITRIA ROZI</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="careers.html">Careers</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Let's Talk</a>
+    </nav>
+    <div class="nav-cta"><a href="contact.html" class="btn primary">Let's Talk</a></div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Log of work</div>
+    <h1>Semua project, dari lab fisika sampai production API.</h1>
+    <p class="lede">Setiap project dibangun end-to-end oleh saya sendiri — dari desain sistem, coding, testing, sampai deployment. Filter berdasarkan bidang untuk melihat kecocokan dengan role yang kamu cari.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="filter-row">
+      <button class="filter-btn active" data-filter="all">Semua</button>
+      <button class="filter-btn" data-filter="ai">AI & Computer Vision</button>
+      <button class="filter-btn" data-filter="backend">Backend & Software</button>
+      <button class="filter-btn" data-filter="qa">QA & Automation</button>
+      <button class="filter-btn" data-filter="data">Data & Physics</button>
+    </div>
+
+    <div class="project-grid">
+
+      <div class="project-card" data-cat="ai backend">
+        <span class="badge-index mono">01</span>
+        <h3>OnionBot AI Platform</h3>
+        <div class="tag-row"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">ONNX Runtime</span><span class="tag alt">OpenCV</span><span class="tag alt">Docker</span></div>
+        <p>Sistem AI full-stack untuk deteksi penyakit daun bawang dari gambar yang diunggah, dengan skor kepercayaan dan rekomendasi penanganan berbasis knowledge base pertanian. Backend FastAPI menyajikan model deep learning dalam format ONNX untuk inferensi ringan. Dilengkapi mini-RAG chatbot (knowledge base lokal + pencarian Wikipedia), riwayat prediksi (SQLite), dashboard analitik, dan sistem autentikasi pengguna. Di-containerize dengan Docker dan di-deploy ke Hugging Face Spaces, termasuk debugging lintas platform (Windows→Linux) untuk isu case-sensitivity, dependency, dan Git LFS.</p>
+        <div class="card-links">
+          <a href="https://huggingface.co/spaces/jifua19/onion-disease-ai" target="_blank" rel="noopener">Live Demo ↗</a>
+          <a href="https://github.com/jifua/Onion_Disease_AI" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-cat="ai data">
+        <span class="badge-index mono">02</span>
+        <h3>Tomato Leaf Disease Classification</h3>
+        <div class="tag-row"><span class="tag">TensorFlow</span><span class="tag">MobileNet</span><span class="tag alt">Hailo AI</span><span class="tag alt">Raspberry Pi 5</span></div>
+        <p>CNN berbasis MobileNet untuk klasifikasi 10 kelas penyakit daun tomat, mencapai 98% akurasi pada dataset 8.000+ gambar (Kaggle & Mendeley). Model dikonversi dari ONNX ke format Hailo HEF untuk deployment di edge device, lalu dijalankan real-time di Raspberry Pi 5 dengan kamera — mencapai 100% akurasi pada data lapangan. Proyek riset MBKM di Pusat Riset Fotonika, BRIN.</p>
+        <div class="card-links">
+          <a href="https://tomato-leaf-disease-five.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a>
+          <a href="https://github.com/jifua/Tomato-Leaf-Disease" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-cat="backend ai">
+        <span class="badge-index mono">03</span>
+        <h3>Job Application Toolkit</h3>
+        <div class="tag-row"><span class="tag">Python</span><span class="tag">Web App</span><span class="tag alt">AI-assisted</span></div>
+        <p>Aplikasi web toolkit pencarian kerja: CV matcher, job description analyzer, cover letter generator, latihan interview, dan application tracker — menerapkan software engineering praktis untuk produk berbasis AI yang nyata dipakai sehari-hari.</p>
+        <div class="card-links">
+          <a href="https://job-application-blond-beta.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a>
+          <a href="https://github.com/jifua/Job-Application" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-cat="backend qa">
+        <span class="badge-index mono">04</span>
+        <h3>Webhook Delivery Service</h3>
+        <div class="tag-row"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag alt">Retry Logic</span></div>
+        <p>Layanan pengiriman webhook dengan retry logic dan exponential backoff, dibangun sebagai bagian dari technical assessment software engineering — fokus pada keandalan pengiriman pesan antar sistem.</p>
+        <div class="card-links">
+          <a href="https://github.com/jifua/webhook-delivery-service" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-cat="backend">
+        <span class="badge-index mono">05</span>
+        <h3>Helpdesk Ticketing System</h3>
+        <div class="tag-row"><span class="tag">PostgreSQL</span><span class="tag">REST API</span></div>
+        <p>Aplikasi full-stack untuk manajemen tiket helpdesk, mencakup perancangan skema database PostgreSQL dan REST API untuk operasional tim support.</p>
+        <div class="card-links">
+          <a href="https://helpdesk-ticketing-system-one.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a>
+          <a href="https://github.com/jifua/Helpdesk-Ticketing-System" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-cat="backend">
+        <span class="badge-index mono">06</span>
+        <h3>IT Asset Management System</h3>
+        <div class="tag-row"><span class="tag">PostgreSQL</span><span class="tag">REST API</span></div>
+        <p>Sistem manajemen aset IT full-stack dengan skema database dan REST API untuk pencatatan, pelacakan, dan validasi data aset perusahaan.</p>
+        <div class="card-links">
+          <a href="https://it-asset-management-nu.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a>
+          <a href="https://github.com/jifua/it-asset-management" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-cat="qa backend">
+        <span class="badge-index mono">07</span>
+        <h3>Selenium Test Automation Suite</h3>
+        <div class="tag-row"><span class="tag">Selenium WebDriver</span><span class="tag">Pytest</span><span class="tag alt">Pytest-HTML</span></div>
+        <p>Automation test suite untuk fitur login mencakup skenario valid dan invalid, meningkatkan cakupan pengujian dibanding manual testing. Menerapkan explicit wait strategy untuk elemen dinamis guna menghilangkan flaky test, dan menghasilkan laporan pengujian otomatis (Pytest-HTML).</p>
+        <div class="card-links">
+          <a href="https://selenium-testing-alpha.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a>
+          <a href="https://github.com/jifua/selenium-testing" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-cat="qa backend">
+        <span class="badge-index mono">08</span>
+        <h3>API Testing Project</h3>
+        <div class="tag-row"><span class="tag">REST API</span><span class="tag alt">Test Validation</span></div>
+        <p>Proyek pengujian API untuk validasi endpoint dan data — melatih kemampuan API testing dan validasi data di level backend.</p>
+        <div class="card-links">
+          <a href="https://api-testing-rose.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a>
+          <a href="https://github.com/jifua/api-testing" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-cat="data">
+        <span class="badge-index mono">09</span>
+        <h3>Data Analysis Project</h3>
+        <div class="tag-row"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag alt">Visualization</span></div>
+        <p>Analisis data eksploratif dan visualisasi menggunakan Python — mengubah data mentah menjadi insight yang mudah dibaca.</p>
+        <div class="card-links">
+          <a href="https://data-analysis-red.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a>
+          <a href="https://github.com/jifua/Data_Analysis" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-cat="data">
+        <span class="badge-index mono">10</span>
+        <h3>Production Analysis Project</h3>
+        <div class="tag-row"><span class="tag">Python</span><span class="tag alt">Data Analysis</span></div>
+        <p>Analisis data produksi untuk mendukung pengambilan keputusan berbasis data pada proses operasional.</p>
+        <div class="card-links">
+          <a href="https://production-analysis-project.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a>
+          <a href="https://github.com/jifua/production-analysis-project" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-cat="data">
+        <span class="badge-index mono">11</span>
+        <h3>Wave Simulation — FFT</h3>
+        <div class="tag-row"><span class="tag">Python</span><span class="tag alt">Matplotlib</span></div>
+        <p>Simulasi perilaku gelombang menggunakan Fast Fourier Transform dengan visualisasi 3D dan analisis domain frekuensi — akar dari cara berpikir "sinyal" yang saya bawa ke seluruh proyek data & AI.</p>
+        <div class="card-links"><span style="color:var(--text-faint);">Project riset akademik</span></div>
+      </div>
+
+      <div class="project-card" data-cat="data">
+        <span class="badge-index mono">12</span>
+        <h3>Electromagnetic Wave Simulation — FDTD</h3>
+        <div class="tag-row"><span class="tag">Python</span><span class="tag alt">Numerical Methods</span></div>
+        <p>Simulasi propagasi gelombang elektromagnetik 1D dengan metode FDTD, termasuk analisis refleksi dan transmisi.</p>
+        <div class="card-links"><span style="color:var(--text-faint);">Project riset akademik</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>© 2026 Fitria Rozi · Batam, Kepulauan Riau, Indonesia</div>
+    <div>
+      <a href="mailto:fitriarozi03@gmail.com">Email</a>
+      <a href="https://github.com/jifua" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/fitriarozi-6a344a1b1" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="contact.html">Let's Talk</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

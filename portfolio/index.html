@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitria Rozi — AI, Software & Data Engineer</title>
+<meta name="description" content="Portofolio Fitria Rozi — fresh graduate Fisika Instrumentasi yang membangun karier di persimpangan presisi sains, data, dan software engineering.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="dot"></span>FITRIA ROZI</a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="careers.html">Careers</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Let's Talk</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn primary">Let's Talk</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Physics Instrumentation → Engineering</div>
+      <h1>Membaca sinyal,<br>menulis kode<span class="accent">.</span></h1>
+      <div class="role-cycle mono" id="role-cycle" data-roles='["AI Engineer", "Software Engineer", "Data Engineer", "Data Analyst", "QA Automation Engineer"]'></div>
+      <p class="lede">Fresh graduate Fisika Instrumentasi, Universitas Andalas. Dua tahun mengkalibrasi 30+ instrumen presisi di laboratorium mengajarkan saya satu hal: sebelum sistem bisa dipercaya, ia harus diukur, diuji, dan divalidasi — prinsip yang sama saya bawa saat membangun model AI, backend API, dan test automation suite.</p>
+      <div class="hero-actions">
+        <a href="projects.html" class="btn primary">Lihat Semua Project →</a>
+        <a href="careers.html" class="btn">Untuk Recruiter</a>
+      </div>
+    </div>
+
+    <div class="scope-panel reveal">
+      <div class="readout"><span>SIGNAL_MONITOR.V2</span><span id="clock">ONLINE</span></div>
+      <canvas id="scope" width="520" height="220" aria-label="Animasi osiloskop interaktif — gerakkan kursor untuk mengubah amplitudo"></canvas>
+      <div class="scope-legend">
+        <span><span class="swatch" style="background:#4FD8C4"></span>CH1 · Physics signal</span>
+        <span><span class="swatch" style="background:#F5A623"></span>CH2 · Code pulse</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap stat-strip reveal">
+    <div class="stat"><div class="num">98%</div><div class="label">Akurasi model klasifikasi CNN</div></div>
+    <div class="stat"><div class="num">30+</div><div class="label">Instrumen presisi dikalibrasi</div></div>
+    <div class="stat"><div class="num">10K+</div><div class="label">Gambar diproses (dataset riset)</div></div>
+    <div class="stat"><div class="num">3.57</div><div class="label">IPK / GPA (skala 4.00)</div></div>
+  </div>
+</section>
+
+<!-- ============ RECRUITER LENS ============ -->
+<section>
+  <div class="wrap" style="max-width: 820px;">
+    <div class="eyebrow reveal">Dari sudut pandang recruiter</div>
+    <h2 class="reveal">Bukan sekadar "lulusan Fisika yang belajar coding."</h2>
+    <p class="lede reveal" style="max-width:100%; font-size:16.5px;">
+      Selama 2 tahun sebagai Asisten Laboratorium Fisika Dasar, saya bertanggung jawab memastikan puluhan alat ukur presisi bekerja sesuai SOP dan standar K3 — kedisiplinan yang menjadi dasar peran QA/QC. Saat magang riset di BRIN, saya membangun model deep learning dengan akurasi 98% dari 8.000+ gambar daun tomat, lalu men-deploy-nya ke Raspberry Pi 5 untuk pengujian real-time di lapangan. Di luar kelas, saya membangun sendiri backend FastAPI, REST API, database, hingga automation test suite dengan Selenium & Pytest. Fisika memberi saya fondasi berpikir sistematis; proyek-proyek mandiri ini yang mengubahnya jadi kemampuan engineering yang bisa langsung dipakai.
+    </p>
+  </div>
+</section>
+
+<!-- ============ FEATURED PROJECTS ============ -->
+<section style="background:var(--bg-soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Selected Work</div>
+        <h2>Project yang paling merepresentasikan cara saya bekerja</h2>
+      </div>
+      <a href="projects.html" class="btn">Semua Project (10+) →</a>
+    </div>
+
+    <div class="project-grid">
+      <div class="project-card reveal">
+        <span class="badge-index mono">01</span>
+        <h3>OnionBot AI Platform</h3>
+        <div class="tag-row">
+          <span class="tag">FastAPI</span><span class="tag">ONNX</span><span class="tag alt">Docker</span><span class="tag alt">RAG Chatbot</span>
+        </div>
+        <p>Sistem deteksi penyakit daun bawang dari gambar, lengkap dengan skor kepercayaan, rekomendasi penanganan, dan chatbot mini-RAG. Di-deploy penuh dengan Docker ke Hugging Face Spaces.</p>
+        <div class="card-links">
+          <a href="https://huggingface.co/spaces/jifua19/onion-disease-ai" target="_blank" rel="noopener">Live Demo ↗</a>
+          <a href="https://github.com/jifua/Onion_Disease_AI" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <span class="badge-index mono">02</span>
+        <h3>Tomato Leaf Disease Classification</h3>
+        <div class="tag-row">
+          <span class="tag">TensorFlow</span><span class="tag">MobileNet</span><span class="tag alt">Raspberry Pi 5</span>
+        </div>
+        <p>CNN untuk klasifikasi 10 penyakit daun tomat, 98% akurasi dari 8.000+ gambar. Dikonversi ke Hailo HEF dan dijalankan real-time di edge device — riset MBKM di BRIN.</p>
+        <div class="card-links">
+          <a href="https://tomato-leaf-disease-five.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a>
+          <a href="https://github.com/jifua/Tomato-Leaf-Disease" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <span class="badge-index mono">03</span>
+        <h3>Selenium Test Automation Suite</h3>
+        <div class="tag-row">
+          <span class="tag">Selenium</span><span class="tag">Pytest</span><span class="tag alt">Pytest-HTML</span>
+        </div>
+        <p>Automation test suite untuk fitur login (skenario valid & invalid), explicit-wait strategy untuk elemen dinamis, dan laporan hasil pengujian otomatis.</p>
+        <div class="card-links">
+          <a href="https://selenium-testing-alpha.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a>
+          <a href="https://github.com/jifua/selenium-testing" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <span class="badge-index mono">04</span>
+        <h3>Helpdesk Ticketing System</h3>
+        <div class="tag-row">
+          <span class="tag">PostgreSQL</span><span class="tag">REST API</span>
+        </div>
+        <p>Full-stack helpdesk ticketing dengan skema database PostgreSQL dan REST API — dibangun berpasangan dengan IT Asset Management System.</p>
+        <div class="card-links">
+          <a href="https://helpdesk-ticketing-system-one.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a>
+          <a href="https://github.com/jifua/Helpdesk-Ticketing-System" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAREERS TEASER ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">For Recruiters</div>
+        <h2>Satu profil, lima jalur karier yang bisa saya isi</h2>
+      </div>
+      <a href="careers.html" class="btn primary">Buka Halaman Careers →</a>
+    </div>
+    <div class="project-grid" style="grid-template-columns:repeat(5,1fr);">
+      <a href="careers.html#ai" class="project-card reveal" style="padding:20px;"><h3 style="font-size:15px;">AI Engineer</h3></a>
+      <a href="careers.html#software" class="project-card reveal" style="padding:20px;"><h3 style="font-size:15px;">Software Engineer</h3></a>
+      <a href="careers.html#data-engineer" class="project-card reveal" style="padding:20px;"><h3 style="font-size:15px;">Data Engineer</h3></a>
+      <a href="careers.html#data-analyst" class="project-card reveal" style="padding:20px;"><h3 style="font-size:15px;">Data Analyst</h3></a>
+      <a href="careers.html#qa" class="project-card reveal" style="padding:20px;"><h3 style="font-size:15px;">QA Automation</h3></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>© 2026 Fitria Rozi · Batam, Kepulauan Riau, Indonesia</div>
+    <div>
+      <a href="mailto:fitriarozi03@gmail.com">Email</a>
+      <a href="https://github.com/jifua" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/fitriarozi-6a344a1b1" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="contact.html">Let's Talk</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
