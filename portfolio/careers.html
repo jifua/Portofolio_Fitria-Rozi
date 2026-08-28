@@ -8,179 +8,225 @@
 </head>
 <body>
 
+<script id="i18n-data" type="application/json">
+{
+  "nav.home": {"id":"Home","en":"Home"},
+  "nav.projects": {"id":"Projects","en":"Projects"},
+  "nav.skills": {"id":"Skills","en":"Skills"},
+  "nav.certs": {"id":"Certificates","en":"Certificates"},
+  "nav.careers": {"id":"Careers","en":"Careers"},
+  "nav.faq": {"id":"FAQ","en":"FAQ"},
+  "nav.contact": {"id":"Let's Talk","en":"Let's Talk"},
+  "hero.eyebrow": {"id":"Built for recruiters","en":"Built for recruiters"},
+  "hero.title": {"id":"Di mana saya bisa langsung berkontribusi.","en":"Where I can contribute right away."},
+  "hero.lede": {"id":"Latar belakang saya Fisika Instrumentasi & Komputasi — bukan Ilmu Komputer. Tapi kombinasi riset AI, backend engineering mandiri, dan disiplin lab presisi membuat saya cocok di lebih dari satu jalur karier. Pilih role di bawah untuk melihat kecocokannya secara spesifik.","en":"My background is Physics Instrumentation & Computation — not Computer Science. But the combination of AI research, independent backend engineering, and precision-lab discipline makes me a fit for more than one career path. Pick a role below to see the specific fit."},
+  "tab.ai": {"id":"AI Engineer","en":"AI Engineer"},
+  "tab.sw": {"id":"Software Engineer","en":"Software Engineer"},
+  "tab.de": {"id":"Data Engineer","en":"Data Engineer"},
+  "tab.da": {"id":"Data Analyst","en":"Data Analyst"},
+  "tab.qa": {"id":"QA Automation Engineer","en":"QA Automation Engineer"},
+  "colwhy": {"id":"Kenapa cocok","en":"Why I'm a fit"},
+  "colproj": {"id":"Project relevan","en":"Relevant projects"},
+  "coldl": {"id":"Download","en":"Download"},
+
+  "ai1":{"id":"Membangun & mengevaluasi model CNN (TensorFlow) hingga 98% akurasi pada 10.000+ gambar, lengkap dengan confusion matrix, precision, recall, ROC-AUC.","en":"Built & evaluated a CNN model (TensorFlow) reaching 98% accuracy on 10,000+ images, complete with confusion matrix, precision, recall, and ROC-AUC."},
+  "ai2":{"id":"Pengalaman deployment model AI end-to-end: ONNX → Hailo HEF → edge device (Raspberry Pi 5) dengan inferensi real-time.","en":"End-to-end AI model deployment experience: ONNX → Hailo HEF → edge device (Raspberry Pi 5) with real-time inference."},
+  "ai3":{"id":"Membangun backend AI production-ready (FastAPI + ONNX Runtime) dan sistem mini-RAG chatbot.","en":"Built a production-ready AI backend (FastAPI + ONNX Runtime) and a mini-RAG chatbot system."},
+  "ai4":{"id":"Aktif memperdalam konsep LLM, RAG, AI Agent, dan prompt engineering lewat proyek mandiri.","en":"Actively deepening LLM, RAG, AI Agent, and prompt engineering concepts through self-directed projects."},
+  "ai.note":{"id":"Fondasi Fisika Instrumentasi & Komputasi membantu memahami sisi matematis deep learning (transformasi sinyal, statistik pengukuran) — bukan sekadar memanggil library.","en":"My Physics Instrumentation & Computation background helps me understand the mathematical side of deep learning (signal transforms, measurement statistics) — not just calling a library."},
+
+  "sw1":{"id":"Membangun sistem backend end-to-end secara mandiri: FastAPI, REST API, database (PostgreSQL/SQLite), autentikasi, dan deployment Docker.","en":"Built end-to-end backend systems independently: FastAPI, REST API, database (PostgreSQL/SQLite), authentication, and Docker deployment."},
+  "sw2":{"id":"Menguasai fondasi computer science: struktur data, algoritma, dan object-oriented programming, dipraktikkan langsung lewat proyek nyata.","en":"Solid computer science fundamentals: data structures, algorithms, and object-oriented programming, applied directly in real projects."},
+  "sw3":{"id":"Pengalaman debugging lintas platform (Windows→Linux) untuk isu dependency, case-sensitivity, dan Git LFS — problem solving yang sistematis.","en":"Cross-platform debugging experience (Windows→Linux) for dependency, case-sensitivity, and Git LFS issues — systematic problem solving."},
+  "sw4":{"id":"Membangun 5+ aplikasi full-stack: Helpdesk Ticketing, IT Asset Management, Job Application Toolkit, Webhook Delivery Service.","en":"Built 5+ full-stack applications: Helpdesk Ticketing, IT Asset Management, Job Application Toolkit, Webhook Delivery Service."},
+  "sw.note":{"id":"Fast learner yang terbiasa membangun sistem dari nol tanpa bootcamp formal — kemampuan belajar mandiri yang teruji lewat portofolio, bukan sertifikat.","en":"A fast learner used to building systems from scratch without a formal bootcamp — self-directed learning proven through a portfolio, not just certificates."},
+
+  "de1":{"id":"Membangun pipeline data end-to-end: dari pengambilan data (Kaggle, Mendeley, eksperimen lab) hingga preprocessing, penyimpanan (SQLite/PostgreSQL), dan penyajian lewat API.","en":"Built end-to-end data pipelines: from data acquisition (Kaggle, Mendeley, lab experiments) to preprocessing, storage (SQLite/PostgreSQL), and serving via API."},
+  "de2":{"id":"Terbiasa memvalidasi keakuratan dan konsistensi data — kebiasaan yang terbentuk dari 2 tahun kerja presisi di laboratorium.","en":"Used to validating data accuracy and consistency — a habit built over 2 years of precision lab work."},
+  "de3":{"id":"Memahami REST API sebagai lapisan penyalur data antar sistem, dibuktikan lewat beberapa proyek backend.","en":"Understands REST APIs as the data layer connecting systems, proven across several backend projects."},
+  "de.note":{"id":"Latar belakang riset artinya terbiasa bekerja dengan dataset besar dan tidak rapi — pengalaman langsung menangani noise dan inkonsistensi data.","en":"A research background means being used to working with large, messy datasets — hands-on experience handling noise and inconsistency."},
+
+  "da1":{"id":"Sertifikasi terstruktur di Power BI, Excel, Python (Pandas), dan R untuk analisis dan visualisasi data.","en":"Structured certifications in Power BI, Excel, Python (Pandas), and R for data analysis and visualization."},
+  "da2":{"id":"Pengalaman nyata memproses dan memvalidasi data eksperimen selama 2 tahun sebagai asisten laboratorium.","en":"Real experience processing and validating experimental data over 2 years as a lab assistant."},
+  "da3":{"id":"Terbiasa membuat laporan dan ringkasan data yang mudah dipahami stakeholder non-teknis.","en":"Used to producing reports and data summaries that are easy for non-technical stakeholders to understand."},
+  "da.note":{"id":"Kombinasi ketelitian ilmiah dan kemampuan storytelling data — dari angka mentah ke insight yang actionable.","en":"A combination of scientific rigor and data storytelling — turning raw numbers into actionable insight."},
+
+  "qa1":{"id":"Membangun automation test suite dengan Selenium WebDriver & Pytest, mencakup functional testing dan regresi skenario valid/invalid.","en":"Built an automation test suite with Selenium WebDriver & Pytest, covering functional testing and valid/invalid regression scenarios."},
+  "qa2":{"id":"Menerapkan explicit wait strategy untuk elemen dinamis — menghilangkan flaky test dan meningkatkan stabilitas eksekusi.","en":"Applied an explicit-wait strategy for dynamic elements — eliminating flaky tests and improving execution stability."},
+  "qa3":{"id":"Fondasi SQL kuat untuk validasi data lewat pengalaman membangun REST API dan database (PostgreSQL, SQLite) sendiri.","en":"Strong SQL foundation for data validation, built through hands-on REST API and database (PostgreSQL, SQLite) experience."},
+  "qa4":{"id":"Dua tahun memvalidasi data pengukuran secara sistematis di lab — kebiasaan analitis inti dari proses QA.","en":"Two years systematically validating measurement data in the lab — the core analytical habit behind QA work."},
+  "qa.note":{"id":"QA/QC bukan hal baru bagi saya — itu literally pekerjaan lab saya selama 2 tahun, hanya sekarang objeknya kode, bukan alat ukur fisika.","en":"QA/QC isn't new to me — it was literally my lab job for 2 years; the object being validated is now code instead of physics instruments."},
+
+  "tl.eyebrow": {"id":"Career trajectory","en":"Career trajectory"},
+  "tl.title": {"id":"Dari alat ukur ke baris kode.","en":"From measurement tools to lines of code."},
+  "tl1.h":{"id":"B.Sc. Physics Instrumentation & Computation, Universitas Andalas","en":"B.Sc. Physics Instrumentation & Computation, Universitas Andalas"},
+  "tl1.p":{"id":"IPK 3.57/4.00. Fokus pada pengukuran presisi, instrumentasi, dan pemrosesan sinyal.","en":"GPA 3.57/4.00. Focused on precision measurement, instrumentation, and signal processing."},
+  "tl2.h":{"id":"Asisten Laboratorium Fisika Dasar","en":"Basic Physics Laboratory Assistant"},
+  "tl2.p":{"id":"Mengoperasikan & mengkalibrasi 30+ instrumen presisi sesuai SOP dan standar K3 — fondasi disiplin QA/QC.","en":"Operated & calibrated 30+ precision instruments per SOP and safety standards — the discipline foundation for QA/QC."},
+  "tl3.h":{"id":"Research Intern (MBKM), BRIN — Pusat Riset Fotonika","en":"Research Intern (MBKM), BRIN — Photonics Research Center"},
+  "tl3.p":{"id":"Membangun model CNN untuk klasifikasi citra, mencapai 98% akurasi; deployment ke edge device.","en":"Built a CNN model for image classification, reaching 98% accuracy; deployed to an edge device."},
+  "tl4.h":{"id":"Independent AI & Software Developer","en":"Independent AI & Software Developer"},
+  "tl4.p":{"id":"Membangun OnionBot AI Platform, automation test suite, dan beberapa aplikasi full-stack secara mandiri.","en":"Built the OnionBot AI Platform, an automation test suite, and several full-stack applications independently."}
+}
+</script>
+
 <header class="nav">
   <div class="nav-inner">
     <a href="index.html" class="logo"><span class="dot"></span>FITRIA ROZI</a>
     <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="certificates.html">Certificates</a>
-      <a href="careers.html" class="active">Careers</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Let's Talk</a>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="projects.html" data-i18n="nav.projects">Projects</a>
+      <a href="skills.html" data-i18n="nav.skills">Skills</a>
+      <a href="certificates.html" data-i18n="nav.certs">Certificates</a>
+      <a href="careers.html" class="active" data-i18n="nav.careers">Careers</a>
+      <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+      <a href="contact.html" data-i18n="nav.contact">Let's Talk</a>
     </nav>
-    <div class="nav-cta"><a href="contact.html" class="btn primary">Let's Talk</a></div>
+    <div class="nav-cta">
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="id">ID</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a href="contact.html" class="btn primary" data-i18n="nav.contact">Let's Talk</a>
+    </div>
   </div>
 </header>
 
 <section class="page-hero">
   <div class="wrap">
-    <div class="eyebrow">Built for recruiters</div>
-    <h1>Di mana saya bisa langsung berkontribusi.</h1>
-    <p class="lede">Latar belakang saya Fisika Instrumentasi — bukan Ilmu Komputer. Tapi kombinasi riset AI, backend engineering mandiri, dan disiplin lab presisi membuat saya cocok di lebih dari satu jalur karier. Pilih role di bawah untuk melihat kecocokannya secara spesifik.</p>
+    <div class="eyebrow" data-i18n="hero.eyebrow">Built for recruiters</div>
+    <h1 data-i18n="hero.title">Di mana saya bisa langsung berkontribusi.</h1>
+    <p class="lede" data-i18n="hero.lede">Latar belakang saya Fisika Instrumentasi.</p>
   </div>
 </section>
 
 <section style="padding-top:0;">
   <div class="wrap">
     <div class="role-tabs">
-      <div class="role-tab active" data-role="ai" id="ai">AI Engineer</div>
-      <div class="role-tab" data-role="software" id="software">Software Engineer</div>
-      <div class="role-tab" data-role="data-engineer" id="data-engineer">Data Engineer</div>
-      <div class="role-tab" data-role="data-analyst" id="data-analyst">Data Analyst</div>
-      <div class="role-tab" data-role="qa" id="qa">QA Automation Engineer</div>
+      <div class="role-tab active" data-role="ai" id="ai" data-i18n="tab.ai">AI Engineer</div>
+      <div class="role-tab" data-role="software" id="software" data-i18n="tab.sw">Software Engineer</div>
+      <div class="role-tab" data-role="data-engineer" id="data-engineer" data-i18n="tab.de">Data Engineer</div>
+      <div class="role-tab" data-role="data-analyst" id="data-analyst" data-i18n="tab.da">Data Analyst</div>
+      <div class="role-tab" data-role="qa" id="qa" data-i18n="tab.qa">QA Automation Engineer</div>
     </div>
 
-    <!-- AI ENGINEER -->
     <div class="role-panel active" data-panel="ai">
       <div class="col">
-        <h4>Kenapa cocok</h4>
+        <h4 data-i18n="colwhy">Kenapa cocok</h4>
         <ul>
-          <li>Membangun & mengevaluasi model CNN (TensorFlow) hingga 98% akurasi pada 10.000+ gambar, lengkap dengan confusion matrix, precision, recall, ROC-AUC.</li>
-          <li>Pengalaman deployment model AI end-to-end: ONNX → Hailo HEF → edge device (Raspberry Pi 5) dengan inferensi real-time.</li>
-          <li>Membangun backend AI production-ready (FastAPI + ONNX Runtime) dan sistem mini-RAG chatbot.</li>
-          <li>Aktif memperdalam konsep LLM, RAG, AI Agent, dan prompt engineering lewat proyek mandiri.</li>
+          <li data-i18n="ai1">…</li><li data-i18n="ai2">…</li><li data-i18n="ai3">…</li><li data-i18n="ai4">…</li>
         </ul>
-        <div class="fit-note">Fondasi Fisika membantu memahami sisi matematis deep learning (transformasi sinyal, statistik pengukuran) — bukan sekadar memanggil library.</div>
+        <div class="fit-note" data-i18n="ai.note">…</div>
       </div>
       <div class="col">
-        <h4>Project relevan</h4>
+        <h4 data-i18n="colproj">Project relevan</h4>
         <ul>
-          <li><a href="projects.html#" style="color:var(--cyan);">Tomato Leaf Disease Classification</a> — CNN 98% akurasi, deployment edge device</li>
-          <li><a href="projects.html#" style="color:var(--cyan);">OnionBot AI Platform</a> — backend AI + mini-RAG chatbot production</li>
+          <li><a href="projects.html" style="color:var(--cyan);">Tomato Leaf Disease Classification</a> — CNN 98% akurasi, deployment edge device</li>
+          <li><a href="projects.html" style="color:var(--cyan);">OnionBot AI Platform</a> — backend AI + mini-RAG chatbot production</li>
         </ul>
-        <h4 style="margin-top:28px;">Download</h4>
+        <h4 style="margin-top:28px;" data-i18n="coldl">Download</h4>
         <a href="assets/cv/CV_Fitria_Rozi_AI_Engineer.pdf" class="btn amber" download>Download CV — AI Engineer ↓</a>
       </div>
     </div>
 
-    <!-- SOFTWARE ENGINEER -->
     <div class="role-panel" data-panel="software">
       <div class="col">
-        <h4>Kenapa cocok</h4>
+        <h4 data-i18n="colwhy">Kenapa cocok</h4>
         <ul>
-          <li>Membangun sistem backend end-to-end secara mandiri: FastAPI, REST API, database (PostgreSQL/SQLite), autentikasi, dan deployment Docker.</li>
-          <li>Menguasai fondasi computer science: struktur data, algoritma, dan object-oriented programming, dipraktikkan langsung lewat proyek nyata.</li>
-          <li>Pengalaman debugging lintas platform (Windows→Linux) untuk isu dependency, case-sensitivity, dan Git LFS — problem solving yang sistematis.</li>
-          <li>Membangun 5+ aplikasi full-stack: Helpdesk Ticketing, IT Asset Management, Job Application Toolkit, Webhook Delivery Service.</li>
+          <li data-i18n="sw1">…</li><li data-i18n="sw2">…</li><li data-i18n="sw3">…</li><li data-i18n="sw4">…</li>
         </ul>
-        <div class="fit-note">Fast learner yang terbiasa membangun sistem dari nol tanpa bootcamp formal — kemampuan belajar mandiri yang teruji lewat portofolio, bukan sertifikat.</div>
+        <div class="fit-note" data-i18n="sw.note">…</div>
       </div>
       <div class="col">
-        <h4>Project relevan</h4>
+        <h4 data-i18n="colproj">Project relevan</h4>
         <ul>
-          <li><a href="projects.html#" style="color:var(--cyan);">Webhook Delivery Service</a> — retry logic & exponential backoff</li>
-          <li><a href="projects.html#" style="color:var(--cyan);">Helpdesk Ticketing System</a> & <a href="projects.html#" style="color:var(--cyan);">IT Asset Management</a> — full-stack REST API + PostgreSQL</li>
+          <li><a href="projects.html" style="color:var(--cyan);">Webhook Delivery Service</a> — retry logic & exponential backoff</li>
+          <li><a href="projects.html" style="color:var(--cyan);">Helpdesk Ticketing System</a> & <a href="projects.html" style="color:var(--cyan);">IT Asset Management</a></li>
         </ul>
-        <h4 style="margin-top:28px;">Download</h4>
+        <h4 style="margin-top:28px;" data-i18n="coldl">Download</h4>
         <a href="assets/cv/CV_Fitria_Rozi_Software_Engineer.pdf" class="btn amber" download>Download CV — Software Engineer ↓</a>
       </div>
     </div>
 
-    <!-- DATA ENGINEER -->
     <div class="role-panel" data-panel="data-engineer">
       <div class="col">
-        <h4>Kenapa cocok</h4>
+        <h4 data-i18n="colwhy">Kenapa cocok</h4>
         <ul>
-          <li>Membangun pipeline data end-to-end: dari pengambilan data (Kaggle, Mendeley, eksperimen lab) hingga preprocessing, penyimpanan (SQLite/PostgreSQL), dan penyajian lewat API.</li>
-          <li>Terbiasa memvalidasi keakuratan dan konsistensi data — kebiasaan yang terbentuk dari 2 tahun kerja presisi di laboratorium.</li>
-          <li>Memahami REST API sebagai lapisan penyalur data antar sistem, dibuktikan lewat beberapa proyek backend.</li>
+          <li data-i18n="de1">…</li><li data-i18n="de2">…</li><li data-i18n="de3">…</li>
         </ul>
-        <div class="fit-note">Latar belakang riset artinya terbiasa bekerja dengan dataset besar dan tidak rapi — pengalaman langsung menangani noise dan inkonsistensi data.</div>
+        <div class="fit-note" data-i18n="de.note">…</div>
       </div>
       <div class="col">
-        <h4>Project relevan</h4>
+        <h4 data-i18n="colproj">Project relevan</h4>
         <ul>
-          <li><a href="projects.html#" style="color:var(--cyan);">Tomato Leaf Disease Classification</a> — pipeline data 8.000+ gambar</li>
-          <li><a href="projects.html#" style="color:var(--cyan);">IT Asset Management</a> & <a href="projects.html#" style="color:var(--cyan);">Helpdesk Ticketing System</a> — desain skema database</li>
+          <li><a href="projects.html" style="color:var(--cyan);">Tomato Leaf Disease Classification</a> — pipeline data 8.000+ gambar</li>
+          <li><a href="projects.html" style="color:var(--cyan);">IT Asset Management</a> & <a href="projects.html" style="color:var(--cyan);">Helpdesk Ticketing System</a></li>
         </ul>
-        <h4 style="margin-top:28px;">Download</h4>
-        <a href="assets/cv/CV_Fitria_Rozi_Software_Engineer.pdf" class="btn amber" download>Download CV — relevan ↓</a>
+        <h4 style="margin-top:28px;" data-i18n="coldl">Download</h4>
+        <a href="assets/cv/CV_Fitria_Rozi_Software_Engineer.pdf" class="btn amber" download>Download CV ↓</a>
       </div>
     </div>
 
-    <!-- DATA ANALYST -->
     <div class="role-panel" data-panel="data-analyst">
       <div class="col">
-        <h4>Kenapa cocok</h4>
+        <h4 data-i18n="colwhy">Kenapa cocok</h4>
         <ul>
-          <li>Sertifikasi terstruktur di Power BI, Excel, Python (Pandas), dan R untuk analisis dan visualisasi data.</li>
-          <li>Pengalaman nyata memproses dan memvalidasi data eksperimen selama 2 tahun sebagai asisten laboratorium.</li>
-          <li>Terbiasa membuat laporan dan ringkasan data yang mudah dipahami stakeholder non-teknis.</li>
+          <li data-i18n="da1">…</li><li data-i18n="da2">…</li><li data-i18n="da3">…</li>
         </ul>
-        <div class="fit-note">Kombinasi ketelitian ilmiah dan kemampuan storytelling data — dari angka mentah ke insight yang actionable.</div>
+        <div class="fit-note" data-i18n="da.note">…</div>
       </div>
       <div class="col">
-        <h4>Project relevan</h4>
+        <h4 data-i18n="colproj">Project relevan</h4>
         <ul>
-          <li><a href="projects.html#" style="color:var(--cyan);">Data Analysis Project</a> & <a href="projects.html#" style="color:var(--cyan);">Production Analysis Project</a></li>
-          <li>Sertifikat Power BI, Excel, dan Pandas — lihat halaman <a href="certificates.html" style="color:var(--cyan);">Certificates</a></li>
+          <li><a href="projects.html" style="color:var(--cyan);">Data Analysis Project</a> & <a href="projects.html" style="color:var(--cyan);">Production Analysis Project</a></li>
+          <li>Lihat sertifikat Power BI, Excel, Pandas di <a href="certificates.html" style="color:var(--cyan);">Certificates</a></li>
         </ul>
-        <h4 style="margin-top:28px;">Download</h4>
-        <a href="assets/cv/CV_Fitria_Rozi_Software_Engineer.pdf" class="btn amber" download>Download CV — relevan ↓</a>
+        <h4 style="margin-top:28px;" data-i18n="coldl">Download</h4>
+        <a href="assets/cv/CV_Fitria_Rozi_Software_Engineer.pdf" class="btn amber" download>Download CV ↓</a>
       </div>
     </div>
 
-    <!-- QA AUTOMATION -->
     <div class="role-panel" data-panel="qa">
       <div class="col">
-        <h4>Kenapa cocok</h4>
+        <h4 data-i18n="colwhy">Kenapa cocok</h4>
         <ul>
-          <li>Membangun automation test suite dengan Selenium WebDriver & Pytest, mencakup functional testing dan regresi skenario valid/invalid.</li>
-          <li>Menerapkan explicit wait strategy untuk elemen dinamis — menghilangkan flaky test dan meningkatkan stabilitas eksekusi.</li>
-          <li>Fondasi SQL kuat untuk validasi data lewat pengalaman membangun REST API dan database (PostgreSQL, SQLite) sendiri.</li>
-          <li>Dua tahun memvalidasi data pengukuran secara sistematis di lab — kebiasaan analitis inti dari proses QA.</li>
+          <li data-i18n="qa1">…</li><li data-i18n="qa2">…</li><li data-i18n="qa3">…</li><li data-i18n="qa4">…</li>
         </ul>
-        <div class="fit-note">QA/QC bukan hal baru bagi saya — itu literally pekerjaan lab saya selama 2 tahun, hanya sekarang objeknya kode, bukan alat ukur fisika.</div>
+        <div class="fit-note" data-i18n="qa.note">…</div>
       </div>
       <div class="col">
-        <h4>Project relevan</h4>
+        <h4 data-i18n="colproj">Project relevan</h4>
         <ul>
-          <li><a href="projects.html#" style="color:var(--cyan);">Selenium Test Automation Suite</a> — login testing, explicit wait, Pytest-HTML report</li>
-          <li><a href="projects.html#" style="color:var(--cyan);">API Testing Project</a> — validasi endpoint & data</li>
+          <li><a href="projects.html" style="color:var(--cyan);">Selenium Test Automation Suite</a></li>
+          <li><a href="projects.html" style="color:var(--cyan);">API Testing Project</a></li>
         </ul>
-        <h4 style="margin-top:28px;">Download</h4>
+        <h4 style="margin-top:28px;" data-i18n="coldl">Download</h4>
         <a href="assets/cv/CV_Fitria_Rozi_QA_Automation.pdf" class="btn amber" download>Download CV — QA Automation ↓</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ TIMELINE ============ -->
 <section style="background:var(--bg-soft); border-top:1px solid var(--line);">
   <div class="wrap" style="max-width:760px;">
-    <div class="eyebrow reveal">Career trajectory</div>
-    <h2 class="reveal">Dari alat ukur ke baris kode.</h2>
+    <div class="eyebrow reveal" data-i18n="tl.eyebrow">Career trajectory</div>
+    <h2 class="reveal" data-i18n="tl.title">Dari alat ukur ke baris kode.</h2>
     <div class="timeline">
       <div class="tl-item reveal">
-        <div class="tl-date mono">2021—2025</div>
-        <div class="tl-line"></div>
-        <div><h4>B.Sc. Physics Instrumentation, Universitas Andalas</h4><p>IPK 3.57/4.00. Fokus pada pengukuran presisi, instrumentasi, dan pemrosesan sinyal.</p></div>
+        <div class="tl-date mono">2021—2025</div><div class="tl-line"></div>
+        <div><h4 data-i18n="tl1.h">…</h4><p data-i18n="tl1.p">…</p></div>
       </div>
       <div class="tl-item reveal">
-        <div class="tl-date mono">2023—2025</div>
-        <div class="tl-line"></div>
-        <div><h4>Asisten Laboratorium Fisika Dasar</h4><p>Mengoperasikan & mengkalibrasi 30+ instrumen presisi sesuai SOP dan standar K3 — fondasi disiplin QA/QC.</p></div>
+        <div class="tl-date mono">2023—2025</div><div class="tl-line"></div>
+        <div><h4 data-i18n="tl2.h">…</h4><p data-i18n="tl2.p">…</p></div>
       </div>
       <div class="tl-item reveal">
-        <div class="tl-date mono">Ags 2024—Jan 2025</div>
-        <div class="tl-line"></div>
-        <div><h4>Research Intern (MBKM), BRIN — Pusat Riset Fotonika</h4><p>Membangun model CNN untuk klasifikasi citra, mencapai 98% akurasi; deployment ke edge device.</p></div>
+        <div class="tl-date mono">Ags 2024—Jan 2025</div><div class="tl-line"></div>
+        <div><h4 data-i18n="tl3.h">…</h4><p data-i18n="tl3.p">…</p></div>
       </div>
       <div class="tl-item reveal">
-        <div class="tl-date mono">Ags 2025—Sekarang</div>
-        <div class="tl-line"></div>
-        <div><h4>Independent AI & Software Developer</h4><p>Membangun OnionBot AI Platform, automation test suite, dan beberapa aplikasi full-stack secara mandiri.</p></div>
+        <div class="tl-date mono">Ags 2025—Sekarang</div><div class="tl-line"></div>
+        <div><h4 data-i18n="tl4.h">…</h4><p data-i18n="tl4.p">…</p></div>
       </div>
     </div>
   </div>
@@ -199,5 +245,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/i18n.js"></script>
 </body>
 </html>

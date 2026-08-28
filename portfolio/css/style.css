@@ -109,6 +109,50 @@ header.nav{
 .nav-cta{ display:flex; gap:10px; align-items:center; }
 .burger{ display:none; }
 
+/* ---------- Lang toggle ---------- */
+.lang-toggle{
+  display:flex; align-items:center; border:1px solid var(--line-strong); border-radius:999px;
+  font-family:'JetBrains Mono', monospace; font-size:11px; overflow:hidden; cursor:pointer;
+}
+.lang-toggle span{ padding: 7px 12px; color: var(--text-muted); transition: all .2s; }
+.lang-toggle span.active{ background: var(--cyan); color:#08110F; font-weight:600; }
+
+/* ---------- Highlights (achievement cards) ---------- */
+.highlight-strip{ display:grid; grid-template-columns: repeat(4,1fr); gap: 18px; margin-top: 72px; }
+.highlight-card{ border:1px solid var(--line); border-radius: var(--radius); background: var(--panel); padding: 26px 22px; }
+.highlight-card .icon{ width:40px; height:40px; margin-bottom:18px; color: var(--cyan); }
+.highlight-card .icon svg{ width:100%; height:100%; }
+.highlight-card h3{ font-size:16.5px; margin-bottom:8px; }
+.highlight-card p{ font-size:13.5px; color: var(--text-muted); margin:0; }
+@media (max-width:860px){ .highlight-strip{ grid-template-columns: repeat(2,1fr); } }
+
+/* ---------- Skills page ---------- */
+.skill-cat{ margin-bottom: 48px; }
+.skill-cat h3{ font-family:'JetBrains Mono', monospace; font-size:13px; text-transform:uppercase; letter-spacing:.08em; color: var(--amber); margin-bottom: 22px; }
+.skill-list{ display:flex; flex-direction:column; gap:16px; }
+.skill-row{ display:grid; grid-template-columns: 200px 1fr 60px; align-items:center; gap:16px; }
+.skill-row .name{ font-family:'Space Grotesk', sans-serif; font-size:15px; }
+.skill-row .bar{ height:6px; background: var(--panel-alt); border-radius:4px; overflow:hidden; border:1px solid var(--line); }
+.skill-row .bar-fill{ height:100%; background: linear-gradient(90deg, var(--cyan), var(--amber)); border-radius:4px; width:0; transition: width 1.1s var(--ease); }
+.skill-row .pct{ font-family:'JetBrains Mono', monospace; font-size:12px; color: var(--text-faint); text-align:right; }
+@media (max-width:640px){ .skill-row{ grid-template-columns: 110px 1fr 40px; gap:10px; } }
+
+.tool-chip-row{ display:flex; flex-wrap:wrap; gap:10px; }
+.tool-chip{ font-family:'JetBrains Mono', monospace; font-size:12.5px; padding: 9px 15px; border:1px solid var(--line-strong); border-radius:999px; color: var(--text-muted); }
+
+/* ---------- STAR project blocks ---------- */
+.star-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap:14px; margin-top:18px; }
+.star-block{ background: var(--panel-alt); border:1px solid var(--line); border-radius: var(--radius-sm); padding:14px 16px; }
+.star-block .k{ font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; margin-bottom:6px; }
+.star-block:nth-child(1) .k{ color: var(--cyan); }
+.star-block:nth-child(2) .k{ color: var(--amber); }
+.star-block:nth-child(3) .k{ color: var(--cyan); }
+.star-block:nth-child(4) .k{ color: var(--amber); }
+.star-block p{ font-size:13px; color: var(--text-muted); margin:0; line-height:1.55; }
+@media (max-width:960px){ .star-grid{ grid-template-columns: repeat(2,1fr); } }
+@media (max-width:640px){ .star-grid{ grid-template-columns: 1fr; } }
+.project-card.wide{ grid-column: 1 / -1; }
+
 @media (max-width: 860px){
   .nav-links{ display:none; }
   .burger{ display:block; }
@@ -273,6 +317,58 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   outline: 2px solid var(--cyan); outline-offset: 2px;
 }
 
+/* ---------- i18n (ID / EN toggle) ---------- */
+.t-en{ display:none; }
+html.lang-en .t-id{ display:none; }
+html.lang-en .t-en{ display:inline; }
+
 /* ---------- Page hero (sub pages) ---------- */
 .page-hero{ padding: 72px 0 40px; }
 .page-hero h1{ font-size: clamp(32px,5vw,52px); }
+
+/* ---------- Identity strip (hero) ---------- */
+.identity-strip{
+  display:inline-flex; align-items:center; gap:10px;
+  font-family:'JetBrains Mono', monospace; font-size:12px; color: var(--text-muted);
+  border:1px solid var(--line-strong); border-radius:999px; padding:7px 16px;
+  margin-bottom: 22px;
+}
+.identity-strip .sep{ color: var(--text-faint); }
+
+/* ---------- Lang toggle ---------- */
+.lang-toggle{ display:flex; border:1px solid var(--line-strong); border-radius:999px; overflow:hidden; }
+.lang-btn{
+  font-family:'JetBrains Mono', monospace; font-size:11.5px; padding:8px 12px;
+  background:transparent; border:none; color: var(--text-faint); cursor:pointer; transition: all .2s;
+}
+.lang-btn.active{ background: var(--cyan); color:#08110F; font-weight:700; }
+.lang-btn:not(.active):hover{ color: var(--text); }
+
+/* ---------- Achievement icon row (Gojek-style, own content) ---------- */
+.achv-row{ display:grid; grid-template-columns: repeat(4,1fr); gap: 28px; margin-top: 20px; }
+.achv{ text-align:left; }
+.achv .icon{ width:52px; height:52px; margin-bottom:18px; color: var(--cyan); }
+.achv .icon svg{ width:100%; height:100%; }
+.achv h4{ font-size:18px; margin-bottom:8px; }
+.achv p{ color: var(--text-muted); font-size:14px; margin:0; }
+@media (max-width: 860px){ .achv-row{ grid-template-columns: repeat(2,1fr); } }
+
+/* ---------- Skill gauges (Skills page) ---------- */
+.skill-group{ margin-bottom: 44px; }
+.skill-group h3{ font-size:15px; font-family:'JetBrains Mono', monospace; text-transform:uppercase; letter-spacing:.06em; color: var(--amber); margin-bottom: 22px; }
+.skill-list{ display:grid; grid-template-columns: 1fr 1fr; gap: 20px 40px; }
+.skill-row{ }
+.skill-row .top{ display:flex; justify-content:space-between; font-size:14px; margin-bottom:8px; }
+.skill-row .top .lvl{ font-family:'JetBrains Mono', monospace; font-size:11px; color: var(--text-faint); }
+.gauge{ height:6px; border-radius:4px; background: var(--panel-alt); overflow:hidden; border:1px solid var(--line); position:relative; }
+.gauge .fill{ height:100%; border-radius:4px; background: linear-gradient(90deg, var(--cyan), var(--amber)); }
+@media (max-width: 700px){ .skill-list{ grid-template-columns:1fr; } }
+
+.tool-chip-row{ display:flex; flex-wrap:wrap; gap:10px; }
+.tool-chip{ font-family:'JetBrains Mono', monospace; font-size:12.5px; padding:9px 15px; border:1px solid var(--line-strong); border-radius:8px; color: var(--text-muted); }
+
+/* ---------- STAR project format ---------- */
+.star-block{ margin-top:14px; display:flex; flex-direction:column; gap:8px; }
+.star-line{ display:grid; grid-template-columns: 78px 1fr; gap:10px; font-size:13.5px; }
+.star-line .k{ font-family:'JetBrains Mono', monospace; font-size:10.5px; color: var(--cyan); text-transform:uppercase; letter-spacing:.06em; padding-top:2px; }
+.star-line .v{ color: var(--text-muted); }

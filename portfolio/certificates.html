@@ -8,123 +8,80 @@
 </head>
 <body>
 
+<script id="i18n-data" type="application/json">
+{
+  "nav.home": {"id":"Home","en":"Home"},
+  "nav.projects": {"id":"Projects","en":"Projects"},
+  "nav.skills": {"id":"Skills","en":"Skills"},
+  "nav.certs": {"id":"Certificates","en":"Certificates"},
+  "nav.careers": {"id":"Careers","en":"Careers"},
+  "nav.faq": {"id":"FAQ","en":"FAQ"},
+  "nav.contact": {"id":"Let's Talk","en":"Let's Talk"},
+  "hero.eyebrow": {"id":"Verified learning","en":"Verified learning"},
+  "hero.title": {"id":"Sertifikat & kredensial.","en":"Certificates & credentials."},
+  "hero.lede": {"id":"Belajar terstruktur untuk memperkuat transisi dari fisika ke data & software — semua bisa diverifikasi langsung lewat link resmi masing-masing penerbit.","en":"Structured learning to reinforce the transition from physics to data & software — all verifiable directly through each issuer's official link."},
+  "s1": {"id":"Data, Programming & AI","en":"Data, Programming & AI"},
+  "s2": {"id":"Riset & Laboratorium","en":"Research & Laboratory"},
+  "verify": {"id":"Verifikasi","en":"Verify"}
+}
+</script>
+
 <header class="nav">
   <div class="nav-inner">
     <a href="index.html" class="logo"><span class="dot"></span>FITRIA ROZI</a>
     <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="certificates.html" class="active">Certificates</a>
-      <a href="careers.html">Careers</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Let's Talk</a>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="projects.html" data-i18n="nav.projects">Projects</a>
+      <a href="skills.html" data-i18n="nav.skills">Skills</a>
+      <a href="certificates.html" class="active" data-i18n="nav.certs">Certificates</a>
+      <a href="careers.html" data-i18n="nav.careers">Careers</a>
+      <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+      <a href="contact.html" data-i18n="nav.contact">Let's Talk</a>
     </nav>
-    <div class="nav-cta"><a href="contact.html" class="btn primary">Let's Talk</a></div>
+    <div class="nav-cta">
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="id">ID</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a href="contact.html" class="btn primary" data-i18n="nav.contact">Let's Talk</a>
+    </div>
   </div>
 </header>
 
 <section class="page-hero">
   <div class="wrap">
-    <div class="eyebrow">Verified learning</div>
-    <h1>Sertifikat & kredensial.</h1>
-    <p class="lede">Belajar terstruktur untuk memperkuat transisi dari fisika ke data & software — semua bisa diverifikasi langsung lewat link resmi masing-masing penerbit.</p>
+    <div class="eyebrow" data-i18n="hero.eyebrow">Verified learning</div>
+    <h1 data-i18n="hero.title">Sertifikat & kredensial.</h1>
+    <p class="lede" data-i18n="hero.lede">Belajar terstruktur untuk memperkuat transisi dari fisika ke data & software.</p>
   </div>
 </section>
 
 <section style="padding-top:0;">
   <div class="wrap">
-    <div class="eyebrow reveal" style="margin-bottom:20px;">Data, Programming & AI</div>
+    <div class="eyebrow reveal" style="margin-bottom:20px;" data-i18n="s1">Data, Programming & AI</div>
     <div class="cert-grid">
-
-      <div class="cert-card reveal">
-        <div class="issuer">IBM · Coursera</div>
-        <h4>Python for Data Science, AI &amp; Development</h4>
-        <div class="meta"><span>3 Feb 2026</span><a href="https://coursera.org/verify/EK1ANWTBG0IW" target="_blank" rel="noopener">Verify ↗</a></div>
-      </div>
-
-      <div class="cert-card reveal">
-        <div class="issuer">Microsoft · Coursera</div>
-        <h4>Data Analysis and Visualization with Power BI</h4>
-        <div class="meta"><span>4 Apr 2026</span><a href="https://coursera.org/verify/DS2QXH25WU9D" target="_blank" rel="noopener">Verify ↗</a></div>
-      </div>
-
-      <div class="cert-card reveal">
-        <div class="issuer">Knowledge Accelerators · Coursera</div>
-        <h4>From Excel to Power BI</h4>
-        <div class="meta"><span>1 Feb 2026</span><a href="https://coursera.org/verify/FFY04YSL99MY" target="_blank" rel="noopener">Verify ↗</a></div>
-      </div>
-
-      <div class="cert-card reveal">
-        <div class="issuer">Macquarie University · Coursera</div>
-        <h4>Excel Fundamentals for Data Analysis</h4>
-        <div class="meta"><span>28 Jan 2026</span><a href="https://coursera.org/verify/XRTA0MD4T6EQ" target="_blank" rel="noopener">Verify ↗</a></div>
-      </div>
-
-      <div class="cert-card reveal">
-        <div class="issuer">DQLab</div>
-        <h4>Python Fundamental for Data Science</h4>
-        <div class="meta"><span>29 Jan 2026</span><span class="mono">#DQLABINTP1NKQKKB</span></div>
-      </div>
-
-      <div class="cert-card reveal">
-        <div class="issuer">DQLab</div>
-        <h4>Python for Data Professional Beginner — Part 1</h4>
-        <div class="meta"><span>7 Des 2025</span><span class="mono">#DQLABINTP1TWQJET</span></div>
-      </div>
-
-      <div class="cert-card reveal">
-        <div class="issuer">DQLab</div>
-        <h4>Exploratory Data Analysis with Python for Beginner</h4>
-        <div class="meta"><span>29 Des 2025</span><span class="mono">#DQLABINTP1KBNNPN</span></div>
-      </div>
-
-      <div class="cert-card reveal">
-        <div class="issuer">DQLab</div>
-        <h4>Data Manipulation with Pandas — Part 1</h4>
-        <div class="meta"><span>1 Feb 2026</span><span class="mono">#DQLABINTP1KKPTKI</span></div>
-      </div>
-
-      <div class="cert-card reveal">
-        <div class="issuer">DQLab</div>
-        <h4>Data Visualization with Python Matplotlib — Part 1</h4>
-        <div class="meta"><span>28 Jan 2026</span><span class="mono">#DQLABDTWP1CJKDBE</span></div>
-      </div>
-
-      <div class="cert-card reveal">
-        <div class="issuer">DQLab</div>
-        <h4>Data Science Challenge with Python</h4>
-        <div class="meta"><span>1 Feb 2026</span><span class="mono">#DQLABPRJC2QHEVVH</span></div>
-      </div>
-
-      <div class="cert-card reveal">
-        <div class="issuer">DQLab</div>
-        <h4>R Fundamental for Data Science</h4>
-        <div class="meta"><span>1 Feb 2026</span><span class="mono">#DQLABINTR1KOCHKW</span></div>
-      </div>
-
-      <div class="cert-card reveal">
-        <div class="issuer">UC Davis · Coursera</div>
-        <h4>Basic English Skills: Travel</h4>
-        <div class="meta"><span>14 Feb 2026</span><a href="https://coursera.org/verify/8521BV0JMEH6" target="_blank" rel="noopener">Verify ↗</a></div>
-      </div>
+      <div class="cert-card reveal"><div class="issuer">IBM · Coursera</div><h4>Python for Data Science, AI &amp; Development</h4><div class="meta"><span>3 Feb 2026</span><a href="https://coursera.org/verify/EK1ANWTBG0IW" target="_blank" rel="noopener" data-i18n="verify">Verifikasi</a><span> ↗</span></div></div>
+      <div class="cert-card reveal"><div class="issuer">Microsoft · Coursera</div><h4>Data Analysis and Visualization with Power BI</h4><div class="meta"><span>4 Apr 2026</span><a href="https://coursera.org/verify/DS2QXH25WU9D" target="_blank" rel="noopener" data-i18n="verify">Verifikasi</a><span> ↗</span></div></div>
+      <div class="cert-card reveal"><div class="issuer">Knowledge Accelerators · Coursera</div><h4>From Excel to Power BI</h4><div class="meta"><span>1 Feb 2026</span><a href="https://coursera.org/verify/FFY04YSL99MY" target="_blank" rel="noopener" data-i18n="verify">Verifikasi</a><span> ↗</span></div></div>
+      <div class="cert-card reveal"><div class="issuer">Macquarie University · Coursera</div><h4>Excel Fundamentals for Data Analysis</h4><div class="meta"><span>28 Jan 2026</span><a href="https://coursera.org/verify/XRTA0MD4T6EQ" target="_blank" rel="noopener" data-i18n="verify">Verifikasi</a><span> ↗</span></div></div>
+      <div class="cert-card reveal"><div class="issuer">DQLab</div><h4>Python Fundamental for Data Science</h4><div class="meta"><span>29 Jan 2026</span><span class="mono">#DQLABINTP1NKQKKB</span></div></div>
+      <div class="cert-card reveal"><div class="issuer">DQLab</div><h4>Python for Data Professional Beginner — Part 1</h4><div class="meta"><span>7 Des 2025</span><span class="mono">#DQLABINTP1TWQJET</span></div></div>
+      <div class="cert-card reveal"><div class="issuer">DQLab</div><h4>Exploratory Data Analysis with Python for Beginner</h4><div class="meta"><span>29 Des 2025</span><span class="mono">#DQLABINTP1KBNNPN</span></div></div>
+      <div class="cert-card reveal"><div class="issuer">DQLab</div><h4>Data Manipulation with Pandas — Part 1</h4><div class="meta"><span>1 Feb 2026</span><span class="mono">#DQLABINTP1KKPTKI</span></div></div>
+      <div class="cert-card reveal"><div class="issuer">DQLab</div><h4>Data Visualization with Python Matplotlib — Part 1</h4><div class="meta"><span>28 Jan 2026</span><span class="mono">#DQLABDTWP1CJKDBE</span></div></div>
+      <div class="cert-card reveal"><div class="issuer">DQLab</div><h4>Data Science Challenge with Python</h4><div class="meta"><span>1 Feb 2026</span><span class="mono">#DQLABPRJC2QHEVVH</span></div></div>
+      <div class="cert-card reveal"><div class="issuer">DQLab</div><h4>R Fundamental for Data Science</h4><div class="meta"><span>1 Feb 2026</span><span class="mono">#DQLABINTR1KOCHKW</span></div></div>
+      <div class="cert-card reveal"><div class="issuer">UC Davis · Coursera</div><h4>Basic English Skills: Travel</h4><div class="meta"><span>14 Feb 2026</span><a href="https://coursera.org/verify/8521BV0JMEH6" target="_blank" rel="noopener" data-i18n="verify">Verifikasi</a><span> ↗</span></div></div>
     </div>
   </div>
 </section>
 
 <section style="padding-top:0;">
   <div class="wrap">
-    <div class="eyebrow reveal" style="margin-bottom:20px;">Riset & Laboratorium</div>
+    <div class="eyebrow reveal" style="margin-bottom:20px;" data-i18n="s2">Riset & Laboratorium</div>
     <div class="cert-grid">
-      <div class="cert-card reveal">
-        <div class="issuer">Badan Riset dan Inovasi Nasional (BRIN)</div>
-        <h4>Program Merdeka Belajar Kampus Merdeka — Pusat Riset Fotonika</h4>
-        <div class="meta"><span>23 Jan 2025</span><span class="mono">MBKM-BRIN-165851/I/2025</span></div>
-      </div>
-      <div class="cert-card reveal">
-        <div class="issuer">Universitas Andalas</div>
-        <h4>Asisten Laboratorium Pendidikan Fisika Dasar — Periode Genap 2024/2025</h4>
-        <div class="meta"><span>Genap 2024/2025</span><span class="mono">LPFD</span></div>
-      </div>
+      <div class="cert-card reveal"><div class="issuer">Badan Riset dan Inovasi Nasional (BRIN)</div><h4>Program Merdeka Belajar Kampus Merdeka — Pusat Riset Fotonika</h4><div class="meta"><span>23 Jan 2025</span><span class="mono">MBKM-BRIN-165851/I/2025</span></div></div>
+      <div class="cert-card reveal"><div class="issuer">Universitas Andalas</div><h4>Asisten Laboratorium Pendidikan Fisika Dasar — Periode Genap 2024/2025</h4><div class="meta"><span>Genap 2024/2025</span><span class="mono">LPFD</span></div></div>
     </div>
   </div>
 </section>
@@ -142,5 +99,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/i18n.js"></script>
 </body>
 </html>

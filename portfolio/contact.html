@@ -8,27 +8,68 @@
 </head>
 <body>
 
+<script id="i18n-data" type="application/json">
+{
+  "nav.home": {"id":"Home","en":"Home"},
+  "nav.projects": {"id":"Projects","en":"Projects"},
+  "nav.skills": {"id":"Skills","en":"Skills"},
+  "nav.certs": {"id":"Certificates","en":"Certificates"},
+  "nav.careers": {"id":"Careers","en":"Careers"},
+  "nav.faq": {"id":"FAQ","en":"FAQ"},
+  "nav.contact": {"id":"Let's Talk","en":"Let's Talk"},
+  "status": {"id":"Terbuka untuk peluang baru","en":"Open to new opportunities"},
+  "hero.eyebrow": {"id":"Get in touch","en":"Get in touch"},
+  "hero.title": {"id":"Mari bicara soal peluang kerja sama.","en":"Let's talk about working together."},
+  "hero.lede": {"id":"Baik untuk posisi AI Engineer, Software Engineer, Data Engineer, Data Analyst, maupun QA Automation Engineer — saya senang mendiskusikannya lebih lanjut.","en":"Whether it's AI Engineer, Software Engineer, Data Engineer, Data Analyst, or QA Automation Engineer — I'd love to discuss further."},
+  "f.name": {"id":"Nama","en":"Name"},
+  "f.name.ph": {"id":"Nama lengkap","en":"Full name"},
+  "f.email": {"id":"Email","en":"Email"},
+  "f.role": {"id":"Role yang dibicarakan","en":"Role you're hiring for"},
+  "f.message": {"id":"Pesan","en":"Message"},
+  "f.message.ph": {"id":"Ceritakan sedikit tentang peluangnya...","en":"Tell me a bit about the opportunity..."},
+  "f.submit": {"id":"Kirim Pesan →","en":"Send Message →"},
+  "f.note": {"id":"Form ini akan membuka email client kamu dengan pesan yang sudah terisi otomatis ke fitriarozi03@gmail.com.","en":"This form opens your email client with the message pre-filled to fitriarozi03@gmail.com."},
+  "role.other": {"id":"Lainnya","en":"Other"},
+  "k.email": {"id":"Email","en":"Email"},
+  "k.phone": {"id":"Telepon","en":"Phone"},
+  "k.loc": {"id":"Lokasi","en":"Location"},
+  "k.gh": {"id":"GitHub","en":"GitHub"},
+  "k.li": {"id":"LinkedIn","en":"LinkedIn"},
+  "k.cv": {"id":"CV","en":"CV"},
+  "cv1":{"id":"↓ Versi AI Engineer","en":"↓ AI Engineer version"},
+  "cv2":{"id":"↓ Versi Software Engineer","en":"↓ Software Engineer version"},
+  "cv3":{"id":"↓ Versi QA Automation","en":"↓ QA Automation version"}
+}
+</script>
+
 <header class="nav">
   <div class="nav-inner">
     <a href="index.html" class="logo"><span class="dot"></span>FITRIA ROZI</a>
     <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="certificates.html">Certificates</a>
-      <a href="careers.html">Careers</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html" class="active">Let's Talk</a>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="projects.html" data-i18n="nav.projects">Projects</a>
+      <a href="skills.html" data-i18n="nav.skills">Skills</a>
+      <a href="certificates.html" data-i18n="nav.certs">Certificates</a>
+      <a href="careers.html" data-i18n="nav.careers">Careers</a>
+      <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+      <a href="contact.html" class="active" data-i18n="nav.contact">Let's Talk</a>
     </nav>
-    <div class="nav-cta"><a href="contact.html" class="btn primary">Let's Talk</a></div>
+    <div class="nav-cta">
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="id">ID</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a href="contact.html" class="btn primary" data-i18n="nav.contact">Let's Talk</a>
+    </div>
   </div>
 </header>
 
 <section class="page-hero">
   <div class="wrap">
-    <span class="status-pill"><span class="blink"></span>Terbuka untuk peluang baru</span>
-    <div class="eyebrow">Get in touch</div>
-    <h1>Mari bicara soal peluang kerja sama.</h1>
-    <p class="lede">Baik untuk posisi AI Engineer, Software Engineer, Data Engineer, Data Analyst, maupun QA Automation Engineer — saya senang mendiskusikannya lebih lanjut.</p>
+    <span class="status-pill"><span class="blink"></span><span data-i18n="status">Terbuka untuk peluang baru</span></span>
+    <div class="eyebrow" data-i18n="hero.eyebrow">Get in touch</div>
+    <h1 data-i18n="hero.title">Mari bicara soal peluang kerja sama.</h1>
+    <p class="lede" data-i18n="hero.lede">Saya senang mendiskusikannya lebih lanjut.</p>
   </div>
 </section>
 
@@ -37,59 +78,44 @@
 
     <form class="talk-form" id="talk-form">
       <div class="field">
-        <label for="name">Nama</label>
-        <input type="text" id="name" name="name" placeholder="Nama lengkap" required>
+        <label for="name" data-i18n="f.name">Nama</label>
+        <input type="text" id="name" name="name" data-i18n-placeholder="f.name.ph" placeholder="Nama lengkap" required>
       </div>
       <div class="field">
-        <label for="email">Email</label>
+        <label for="email" data-i18n="f.email">Email</label>
         <input type="email" id="email" name="email" placeholder="email@perusahaan.com" required>
       </div>
       <div class="field">
-        <label for="role">Role yang dibicarakan</label>
+        <label for="role" data-i18n="f.role">Role yang dibicarakan</label>
         <select id="role" name="role">
           <option>AI Engineer</option>
           <option>Software Engineer</option>
           <option>Data Engineer</option>
           <option>Data Analyst</option>
           <option>QA Automation Engineer</option>
-          <option>Lainnya</option>
+          <option data-i18n="role.other">Lainnya</option>
         </select>
       </div>
       <div class="field">
-        <label for="message">Pesan</label>
-        <textarea id="message" name="message" rows="5" placeholder="Ceritakan sedikit tentang peluangnya..." required></textarea>
+        <label for="message" data-i18n="f.message">Pesan</label>
+        <textarea id="message" name="message" rows="5" data-i18n-placeholder="f.message.ph" placeholder="Ceritakan sedikit tentang peluangnya..." required></textarea>
       </div>
-      <button type="submit" class="btn primary" style="align-self:flex-start; margin-top:8px;">Kirim Pesan →</button>
-      <p style="font-size:12.5px; color:var(--text-faint); margin-top:-4px;">Form ini akan membuka email client kamu dengan pesan yang sudah terisi otomatis ke fitriarozi03@gmail.com.</p>
+      <button type="submit" class="btn primary" style="align-self:flex-start; margin-top:8px;" data-i18n="f.submit">Kirim Pesan →</button>
+      <p style="font-size:12.5px; color:var(--text-faint); margin-top:-4px;" data-i18n="f.note">Form ini akan membuka email client kamu.</p>
     </form>
 
     <div class="contact-list">
-      <div class="item">
-        <div class="k mono">Email</div>
-        <div class="v"><a href="mailto:fitriarozi03@gmail.com">fitriarozi03@gmail.com</a></div>
-      </div>
-      <div class="item">
-        <div class="k mono">Phone</div>
-        <div class="v"><a href="tel:+6282384117474">+62 823-8411-7474</a></div>
-      </div>
-      <div class="item">
-        <div class="k mono">Location</div>
-        <div class="v">Bida Ayu, Gang Mawar Blok A8 No 3, Mangsang, Sei Beduk, Kota Batam, Kepulauan Riau, Indonesia</div>
-      </div>
-      <div class="item">
-        <div class="k mono">GitHub</div>
-        <div class="v"><a href="https://github.com/jifua" target="_blank" rel="noopener">github.com/jifua</a></div>
-      </div>
-      <div class="item">
-        <div class="k mono">LinkedIn</div>
-        <div class="v"><a href="https://www.linkedin.com/in/fitriarozi-6a344a1b1" target="_blank" rel="noopener">linkedin.com/in/fitriarozi</a></div>
-      </div>
+      <div class="item"><div class="k mono" data-i18n="k.email">Email</div><div class="v"><a href="mailto:fitriarozi03@gmail.com">fitriarozi03@gmail.com</a></div></div>
+      <div class="item"><div class="k mono" data-i18n="k.phone">Telepon</div><div class="v"><a href="tel:+6282384117474">+62 823-8411-7474</a></div></div>
+      <div class="item"><div class="k mono" data-i18n="k.loc">Lokasi</div><div class="v">Bida Ayu, Gang Mawar Blok A8 No 3, Mangsang, Sei Beduk, Kota Batam, Kepulauan Riau, Indonesia</div></div>
+      <div class="item"><div class="k mono" data-i18n="k.gh">GitHub</div><div class="v"><a href="https://github.com/jifua" target="_blank" rel="noopener">github.com/jifua</a></div></div>
+      <div class="item"><div class="k mono" data-i18n="k.li">LinkedIn</div><div class="v"><a href="https://www.linkedin.com/in/fitriarozi-6a344a1b1" target="_blank" rel="noopener">linkedin.com/in/fitriarozi</a></div></div>
       <div class="item" style="border-bottom:none;">
-        <div class="k mono">CV</div>
+        <div class="k mono" data-i18n="k.cv">CV</div>
         <div class="v" style="display:flex; flex-direction:column; gap:8px;">
-          <a href="assets/cv/CV_Fitria_Rozi_AI_Engineer.pdf" download>↓ AI Engineer version</a>
-          <a href="assets/cv/CV_Fitria_Rozi_Software_Engineer.pdf" download>↓ Software Engineer version</a>
-          <a href="assets/cv/CV_Fitria_Rozi_QA_Automation.pdf" download>↓ QA Automation version</a>
+          <a href="assets/cv/CV_Fitria_Rozi_AI_Engineer.pdf" download data-i18n="cv1">↓ Versi AI Engineer</a>
+          <a href="assets/cv/CV_Fitria_Rozi_Software_Engineer.pdf" download data-i18n="cv2">↓ Versi Software Engineer</a>
+          <a href="assets/cv/CV_Fitria_Rozi_QA_Automation.pdf" download data-i18n="cv3">↓ Versi QA Automation</a>
         </div>
       </div>
     </div>
@@ -109,5 +135,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/i18n.js"></script>
 </body>
 </html>

@@ -8,37 +8,120 @@
 </head>
 <body>
 
+<script id="i18n-data" type="application/json">
+{
+  "nav.home": {"id":"Home","en":"Home"},
+  "nav.projects": {"id":"Projects","en":"Projects"},
+  "nav.skills": {"id":"Skills","en":"Skills"},
+  "nav.certs": {"id":"Certificates","en":"Certificates"},
+  "nav.careers": {"id":"Careers","en":"Careers"},
+  "nav.faq": {"id":"FAQ","en":"FAQ"},
+  "nav.contact": {"id":"Let's Talk","en":"Let's Talk"},
+  "hero.eyebrow": {"id":"Log of work","en":"Log of work"},
+  "hero.title": {"id":"Semua project, dari lab fisika sampai production API.","en":"Every project, from the physics lab to production APIs."},
+  "hero.lede": {"id":"Setiap project ditulis dengan format STAR (Situation–Task–Action–Result) supaya kamu bisa lihat konteks, tanggung jawab, dan hasil terukurnya — bukan cuma daftar teknologi.","en":"Every project is written in STAR format (Situation–Task–Action–Result) so you can see the context, ownership, and measurable outcome — not just a tech list."},
+  "f.all": {"id":"Semua","en":"All"},
+  "f.ai": {"id":"AI & Computer Vision","en":"AI & Computer Vision"},
+  "f.backend": {"id":"Backend & Software","en":"Backend & Software"},
+  "f.qa": {"id":"QA & Automation","en":"QA & Automation"},
+  "f.data": {"id":"Data & Physics","en":"Data & Physics"},
+  "s":{"id":"Situation","en":"Situation"},"t":{"id":"Task","en":"Task"},"a":{"id":"Action","en":"Action"},"r":{"id":"Result","en":"Result"},
+
+  "p1.s":{"id":"Petani skala kecil sulit mendiagnosis penyakit tanaman bawang secara cepat & akurat tanpa akses ke ahli pertanian.","en":"Small-scale farmers struggle to diagnose onion plant diseases quickly and accurately without access to agricultural experts."},
+  "p1.t":{"id":"Membangun sistem AI yang bisa mendeteksi penyakit dari foto daun dan memberi rekomendasi penanganan, end-to-end sampai bisa diakses publik.","en":"Build an AI system that detects disease from leaf photos and gives treatment recommendations, end-to-end and publicly accessible."},
+  "p1.a":{"id":"Membangun backend FastAPI yang menyajikan model deep learning (format ONNX) untuk inferensi ringan; menambahkan mini-RAG chatbot (knowledge base lokal + Wikipedia); membuat riwayat prediksi (SQLite), dashboard analitik, dan autentikasi pengguna; men-containerize dengan Docker.","en":"Built a FastAPI backend serving a deep learning model in ONNX format for lightweight inference; added a mini-RAG chatbot (local knowledge base + Wikipedia); built prediction history (SQLite), an analytics dashboard, and user authentication; containerized with Docker."},
+  "p1.r":{"id":"Sistem live dan bisa diakses publik di Hugging Face Spaces, termasuk berhasil menyelesaikan debugging lintas platform (Windows→Linux) untuk isu dependency dan Git LFS.","en":"System is live and publicly accessible on Hugging Face Spaces, including successfully resolving cross-platform (Windows→Linux) debugging for dependency and Git LFS issues."},
+
+  "p2.s":{"id":"Petani tomat butuh deteksi dini penyakit daun di lapangan, di mana koneksi internet dan komputasi cloud sering tidak tersedia.","en":"Tomato farmers need early leaf-disease detection in the field, where internet connectivity and cloud compute are often unavailable."},
+  "p2.t":{"id":"Melatih model klasifikasi 10 penyakit daun tomat dan men-deploy-nya agar berjalan langsung di perangkat edge tanpa cloud.","en":"Train a 10-class tomato leaf disease classification model and deploy it to run directly on an edge device, without the cloud."},
+  "p2.a":{"id":"Melatih CNN berbasis MobileNet pada 8.000+ gambar (Kaggle & Mendeley); mengevaluasi dengan confusion matrix, precision, recall, ROC-AUC; mengonversi model dari ONNX ke format Hailo HEF; men-deploy ke Raspberry Pi 5 dengan kamera untuk inferensi real-time.","en":"Trained a MobileNet-based CNN on 8,000+ images (Kaggle & Mendeley); evaluated with confusion matrix, precision, recall, ROC-AUC; converted the model from ONNX to Hailo HEF format; deployed to a Raspberry Pi 5 with camera for real-time inference."},
+  "p2.r":{"id":"98% akurasi pada data pengujian, dan 100% akurasi saat diuji langsung dengan data lapangan di perangkat edge.","en":"98% accuracy on the test set, and 100% accuracy when tested live with field data on the edge device."},
+
+  "p3.s":{"id":"Pengujian manual pada fitur login memakan waktu dan rawan human error saat regresi berulang.","en":"Manual testing of the login feature was time-consuming and error-prone across repeated regression cycles."},
+  "p3.t":{"id":"Membangun automation test suite yang mencakup skenario valid dan invalid, serta stabil terhadap elemen dinamis.","en":"Build an automation test suite covering valid and invalid scenarios, stable against dynamic elements."},
+  "p3.a":{"id":"Merancang test suite dengan Selenium WebDriver & Pytest; menerapkan explicit wait strategy untuk menangani elemen dinamis; menghasilkan laporan hasil pengujian otomatis dengan Pytest-HTML.","en":"Designed the test suite with Selenium WebDriver & Pytest; implemented an explicit wait strategy to handle dynamic elements; generated automated test reports with Pytest-HTML."},
+  "p3.r":{"id":"Cakupan pengujian meningkat dibanding manual testing, flaky test hilang, dan review kualitas oleh tim non-teknis jadi lebih cepat lewat laporan otomatis.","en":"Test coverage increased compared to manual testing, flaky tests were eliminated, and quality review by non-technical teams became faster thanks to automated reports."},
+
+  "p4.s":{"id":"Tim support butuh sistem terpusat untuk mencatat dan melacak tiket bantuan, menggantikan pencatatan manual.","en":"The support team needed a centralized system to log and track help tickets, replacing manual tracking."},
+  "p4.t":{"id":"Membangun aplikasi helpdesk ticketing full-stack dengan database dan API yang bisa diandalkan.","en":"Build a full-stack helpdesk ticketing application with a reliable database and API."},
+  "p4.a":{"id":"Merancang skema database PostgreSQL untuk entitas tiket, pengguna, dan status; membangun REST API untuk operasi CRUD tiket; deploy end-to-end.","en":"Designed the PostgreSQL database schema for ticket, user, and status entities; built a REST API for ticket CRUD operations; deployed end-to-end."},
+  "p4.r":{"id":"Aplikasi berjalan live dan dipasangkan dengan IT Asset Management System sebagai satu ekosistem pengelolaan IT internal.","en":"Application runs live and is paired with the IT Asset Management System as one internal IT-management ecosystem."},
+
+  "p5.s":{"id":"Sistem antar layanan butuh cara yang andal untuk mengirim notifikasi event tanpa kehilangan data saat penerima sedang down.","en":"Inter-service systems needed a reliable way to send event notifications without losing data when a receiver is down."},
+  "p5.t":{"id":"Membangun layanan pengiriman webhook yang tahan terhadap kegagalan sementara pada sisi penerima.","en":"Build a webhook delivery service resilient to temporary failures on the receiving end."},
+  "p5.a":{"id":"Membangun service dengan Python & FastAPI; menerapkan retry logic dengan exponential backoff untuk percobaan ulang pengiriman yang gagal.","en":"Built the service with Python & FastAPI; implemented retry logic with exponential backoff for retrying failed deliveries."},
+  "p5.r":{"id":"Diselesaikan sebagai bagian dari technical assessment software engineering, mendemonstrasikan pemahaman soal keandalan sistem terdistribusi.","en":"Completed as part of a software engineering technical assessment, demonstrating an understanding of distributed system reliability."},
+
+  "p6.s":{"id":"Perusahaan butuh pencatatan aset IT yang terpusat dan mudah divalidasi untuk keperluan audit.","en":"The company needed centralized, easily-validated IT asset records for audit purposes."},
+  "p6.t":{"id":"Membangun sistem manajemen aset IT full-stack dengan database dan REST API.","en":"Build a full-stack IT asset management system with a database and REST API."},
+  "p6.a":{"id":"Merancang skema database PostgreSQL untuk pencatatan aset; membangun REST API untuk pencatatan, pelacakan, dan validasi data aset.","en":"Designed the PostgreSQL database schema for asset records; built a REST API for recording, tracking, and validating asset data."},
+  "p6.r":{"id":"Sistem berjalan live, memberi pemahaman langsung soal desain skema data dan penulisan query SQL untuk validasi.","en":"System runs live, giving hands-on understanding of data-schema design and writing SQL queries for validation."},
+
+  "p7.s":{"id":"Endpoint API perlu divalidasi secara konsisten untuk memastikan data yang dikembalikan benar dan sesuai kontrak.","en":"API endpoints needed consistent validation to ensure returned data was correct and matched the contract."},
+  "p7.t":{"id":"Membangun proyek pengujian API untuk memvalidasi endpoint dan data secara sistematis.","en":"Build an API testing project to systematically validate endpoints and data."},
+  "p7.a":{"id":"Menulis skenario pengujian untuk berbagai endpoint; memvalidasi response, status code, dan struktur data yang dikembalikan.","en":"Wrote test scenarios for various endpoints; validated the response, status code, and structure of returned data."},
+  "p7.r":{"id":"Melatih langsung kemampuan API testing dan validasi data di level backend — dasar untuk peran QA Automation.","en":"Directly trained API testing and backend-level data validation skills — a foundation for a QA Automation role."},
+
+  "p8.s":{"id":"Data operasional mentah sulit dibaca untuk pengambilan keputusan cepat oleh tim non-teknis.","en":"Raw operational data was hard to read for quick decision-making by non-technical teams."},
+  "p8.t":{"id":"Mengubah data mentah menjadi analisis dan visualisasi yang mudah dipahami.","en":"Turn raw data into analysis and visualizations that are easy to understand."},
+  "p8.a":{"id":"Melakukan eksplorasi data dengan Python & Pandas; membangun visualisasi untuk menyoroti tren dan anomali penting.","en":"Explored the data with Python & Pandas; built visualizations to highlight key trends and anomalies."},
+  "p8.r":{"id":"Menghasilkan insight yang actionable dan mudah dibaca, di-deploy sebagai aplikasi web yang bisa diakses langsung.","en":"Produced actionable, easy-to-read insights, deployed as a directly accessible web application."},
+
+  "p9.s":{"id":"Proses produksi menghasilkan data yang perlu dianalisis untuk mendukung keputusan operasional.","en":"The production process generated data that needed analysis to support operational decisions."},
+  "p9.t":{"id":"Menganalisis data produksi untuk menemukan pola yang relevan bagi pengambilan keputusan.","en":"Analyze production data to find patterns relevant to decision-making."},
+  "p9.a":{"id":"Membersihkan dan mengeksplorasi dataset produksi dengan Python; menyusun analisis dan visualisasi hasil temuan.","en":"Cleaned and explored the production dataset with Python; put together an analysis and visualization of the findings."},
+  "p9.r":{"id":"Analisis di-deploy sebagai aplikasi web yang bisa diakses untuk mendukung diskusi operasional berbasis data.","en":"The analysis was deployed as an accessible web app to support data-driven operational discussions."},
+
+  "p10.s":{"id":"Memahami perilaku gelombang secara analitis butuh visualisasi domain frekuensi, bukan cuma domain waktu.","en":"Understanding wave behavior analytically requires frequency-domain visualization, not just the time domain."},
+  "p10.t":{"id":"Mensimulasikan dan memvisualisasikan gelombang menggunakan transformasi Fourier.","en":"Simulate and visualize waves using the Fourier transform."},
+  "p10.a":{"id":"Mengimplementasikan Fast Fourier Transform di Python; membangun visualisasi 3D dengan Matplotlib untuk analisis domain frekuensi.","en":"Implemented the Fast Fourier Transform in Python; built 3D visualizations with Matplotlib for frequency-domain analysis."},
+  "p10.r":{"id":"Fondasi cara berpikir \"sinyal\" yang saya bawa ke seluruh proyek data & AI setelahnya.","en":"The foundation of the \"signal\" way of thinking I carried into every data & AI project since."},
+
+  "p11.s":{"id":"Perilaku gelombang elektromagnetik pada batas material perlu dianalisis secara numerik, bukan hanya persamaan tertutup.","en":"Electromagnetic wave behavior at material boundaries needed numerical, not just closed-form, analysis."},
+  "p11.t":{"id":"Mensimulasikan propagasi gelombang EM 1D beserta refleksi dan transmisinya.","en":"Simulate 1D EM wave propagation along with its reflection and transmission."},
+  "p11.a":{"id":"Mengimplementasikan metode FDTD (Finite-Difference Time-Domain) di Python untuk mensimulasikan propagasi gelombang.","en":"Implemented the FDTD (Finite-Difference Time-Domain) method in Python to simulate wave propagation."},
+  "p11.r":{"id":"Menghasilkan analisis refleksi & transmisi yang tervalidasi terhadap teori — dasar numerical methods yang saya pakai di proyek ML.","en":"Produced reflection & transmission analysis validated against theory — the numerical-methods foundation I carry into ML projects."}
+}
+</script>
+
 <header class="nav">
   <div class="nav-inner">
     <a href="index.html" class="logo"><span class="dot"></span>FITRIA ROZI</a>
     <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="projects.html" class="active">Projects</a>
-      <a href="certificates.html">Certificates</a>
-      <a href="careers.html">Careers</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Let's Talk</a>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="projects.html" class="active" data-i18n="nav.projects">Projects</a>
+      <a href="skills.html" data-i18n="nav.skills">Skills</a>
+      <a href="certificates.html" data-i18n="nav.certs">Certificates</a>
+      <a href="careers.html" data-i18n="nav.careers">Careers</a>
+      <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+      <a href="contact.html" data-i18n="nav.contact">Let's Talk</a>
     </nav>
-    <div class="nav-cta"><a href="contact.html" class="btn primary">Let's Talk</a></div>
+    <div class="nav-cta">
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="id">ID</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a href="contact.html" class="btn primary" data-i18n="nav.contact">Let's Talk</a>
+    </div>
   </div>
 </header>
 
 <section class="page-hero">
   <div class="wrap">
-    <div class="eyebrow">Log of work</div>
-    <h1>Semua project, dari lab fisika sampai production API.</h1>
-    <p class="lede">Setiap project dibangun end-to-end oleh saya sendiri — dari desain sistem, coding, testing, sampai deployment. Filter berdasarkan bidang untuk melihat kecocokan dengan role yang kamu cari.</p>
+    <div class="eyebrow" data-i18n="hero.eyebrow">Log of work</div>
+    <h1 data-i18n="hero.title">Semua project, dari lab fisika sampai production API.</h1>
+    <p class="lede" data-i18n="hero.lede">Setiap project ditulis dengan format STAR.</p>
   </div>
 </section>
 
 <section style="padding-top:0;">
   <div class="wrap">
     <div class="filter-row">
-      <button class="filter-btn active" data-filter="all">Semua</button>
-      <button class="filter-btn" data-filter="ai">AI & Computer Vision</button>
-      <button class="filter-btn" data-filter="backend">Backend & Software</button>
-      <button class="filter-btn" data-filter="qa">QA & Automation</button>
-      <button class="filter-btn" data-filter="data">Data & Physics</button>
+      <button class="filter-btn active" data-filter="all" data-i18n="f.all">Semua</button>
+      <button class="filter-btn" data-filter="ai" data-i18n="f.ai">AI & Computer Vision</button>
+      <button class="filter-btn" data-filter="backend" data-i18n="f.backend">Backend & Software</button>
+      <button class="filter-btn" data-filter="qa" data-i18n="f.qa">QA & Automation</button>
+      <button class="filter-btn" data-filter="data" data-i18n="f.data">Data & Physics</button>
     </div>
 
     <div class="project-grid">
@@ -47,7 +130,12 @@
         <span class="badge-index mono">01</span>
         <h3>OnionBot AI Platform</h3>
         <div class="tag-row"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">ONNX Runtime</span><span class="tag alt">OpenCV</span><span class="tag alt">Docker</span></div>
-        <p>Sistem AI full-stack untuk deteksi penyakit daun bawang dari gambar yang diunggah, dengan skor kepercayaan dan rekomendasi penanganan berbasis knowledge base pertanian. Backend FastAPI menyajikan model deep learning dalam format ONNX untuk inferensi ringan. Dilengkapi mini-RAG chatbot (knowledge base lokal + pencarian Wikipedia), riwayat prediksi (SQLite), dashboard analitik, dan sistem autentikasi pengguna. Di-containerize dengan Docker dan di-deploy ke Hugging Face Spaces, termasuk debugging lintas platform (Windows→Linux) untuk isu case-sensitivity, dependency, dan Git LFS.</p>
+        <div class="star-block">
+          <div class="star-line"><span class="k mono" data-i18n="s">Situation</span><span class="v" data-i18n="p1.s">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="t">Task</span><span class="v" data-i18n="p1.t">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="a">Action</span><span class="v" data-i18n="p1.a">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="r">Result</span><span class="v" data-i18n="p1.r">…</span></div>
+        </div>
         <div class="card-links">
           <a href="https://huggingface.co/spaces/jifua19/onion-disease-ai" target="_blank" rel="noopener">Live Demo ↗</a>
           <a href="https://github.com/jifua/Onion_Disease_AI" target="_blank" rel="noopener">GitHub ↗</a>
@@ -58,7 +146,12 @@
         <span class="badge-index mono">02</span>
         <h3>Tomato Leaf Disease Classification</h3>
         <div class="tag-row"><span class="tag">TensorFlow</span><span class="tag">MobileNet</span><span class="tag alt">Hailo AI</span><span class="tag alt">Raspberry Pi 5</span></div>
-        <p>CNN berbasis MobileNet untuk klasifikasi 10 kelas penyakit daun tomat, mencapai 98% akurasi pada dataset 8.000+ gambar (Kaggle & Mendeley). Model dikonversi dari ONNX ke format Hailo HEF untuk deployment di edge device, lalu dijalankan real-time di Raspberry Pi 5 dengan kamera — mencapai 100% akurasi pada data lapangan. Proyek riset MBKM di Pusat Riset Fotonika, BRIN.</p>
+        <div class="star-block">
+          <div class="star-line"><span class="k mono" data-i18n="s">Situation</span><span class="v" data-i18n="p2.s">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="t">Task</span><span class="v" data-i18n="p2.t">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="a">Action</span><span class="v" data-i18n="p2.a">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="r">Result</span><span class="v" data-i18n="p2.r">…</span></div>
+        </div>
         <div class="card-links">
           <a href="https://tomato-leaf-disease-five.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a>
           <a href="https://github.com/jifua/Tomato-Leaf-Disease" target="_blank" rel="noopener">GitHub ↗</a>
@@ -69,7 +162,7 @@
         <span class="badge-index mono">03</span>
         <h3>Job Application Toolkit</h3>
         <div class="tag-row"><span class="tag">Python</span><span class="tag">Web App</span><span class="tag alt">AI-assisted</span></div>
-        <p>Aplikasi web toolkit pencarian kerja: CV matcher, job description analyzer, cover letter generator, latihan interview, dan application tracker — menerapkan software engineering praktis untuk produk berbasis AI yang nyata dipakai sehari-hari.</p>
+        <p style="color:var(--text-muted); font-size:14.5px;">CV matcher, job description analyzer, cover letter generator, latihan interview, dan application tracker dalam satu toolkit.</p>
         <div class="card-links">
           <a href="https://job-application-blond-beta.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a>
           <a href="https://github.com/jifua/Job-Application" target="_blank" rel="noopener">GitHub ↗</a>
@@ -80,17 +173,25 @@
         <span class="badge-index mono">04</span>
         <h3>Webhook Delivery Service</h3>
         <div class="tag-row"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag alt">Retry Logic</span></div>
-        <p>Layanan pengiriman webhook dengan retry logic dan exponential backoff, dibangun sebagai bagian dari technical assessment software engineering — fokus pada keandalan pengiriman pesan antar sistem.</p>
-        <div class="card-links">
-          <a href="https://github.com/jifua/webhook-delivery-service" target="_blank" rel="noopener">GitHub ↗</a>
+        <div class="star-block">
+          <div class="star-line"><span class="k mono" data-i18n="s">Situation</span><span class="v" data-i18n="p5.s">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="t">Task</span><span class="v" data-i18n="p5.t">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="a">Action</span><span class="v" data-i18n="p5.a">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="r">Result</span><span class="v" data-i18n="p5.r">…</span></div>
         </div>
+        <div class="card-links"><a href="https://github.com/jifua/webhook-delivery-service" target="_blank" rel="noopener">GitHub ↗</a></div>
       </div>
 
       <div class="project-card" data-cat="backend">
         <span class="badge-index mono">05</span>
         <h3>Helpdesk Ticketing System</h3>
         <div class="tag-row"><span class="tag">PostgreSQL</span><span class="tag">REST API</span></div>
-        <p>Aplikasi full-stack untuk manajemen tiket helpdesk, mencakup perancangan skema database PostgreSQL dan REST API untuk operasional tim support.</p>
+        <div class="star-block">
+          <div class="star-line"><span class="k mono" data-i18n="s">Situation</span><span class="v" data-i18n="p4.s">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="t">Task</span><span class="v" data-i18n="p4.t">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="a">Action</span><span class="v" data-i18n="p4.a">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="r">Result</span><span class="v" data-i18n="p4.r">…</span></div>
+        </div>
         <div class="card-links">
           <a href="https://helpdesk-ticketing-system-one.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a>
           <a href="https://github.com/jifua/Helpdesk-Ticketing-System" target="_blank" rel="noopener">GitHub ↗</a>
@@ -101,7 +202,12 @@
         <span class="badge-index mono">06</span>
         <h3>IT Asset Management System</h3>
         <div class="tag-row"><span class="tag">PostgreSQL</span><span class="tag">REST API</span></div>
-        <p>Sistem manajemen aset IT full-stack dengan skema database dan REST API untuk pencatatan, pelacakan, dan validasi data aset perusahaan.</p>
+        <div class="star-block">
+          <div class="star-line"><span class="k mono" data-i18n="s">Situation</span><span class="v" data-i18n="p6.s">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="t">Task</span><span class="v" data-i18n="p6.t">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="a">Action</span><span class="v" data-i18n="p6.a">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="r">Result</span><span class="v" data-i18n="p6.r">…</span></div>
+        </div>
         <div class="card-links">
           <a href="https://it-asset-management-nu.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a>
           <a href="https://github.com/jifua/it-asset-management" target="_blank" rel="noopener">GitHub ↗</a>
@@ -112,7 +218,12 @@
         <span class="badge-index mono">07</span>
         <h3>Selenium Test Automation Suite</h3>
         <div class="tag-row"><span class="tag">Selenium WebDriver</span><span class="tag">Pytest</span><span class="tag alt">Pytest-HTML</span></div>
-        <p>Automation test suite untuk fitur login mencakup skenario valid dan invalid, meningkatkan cakupan pengujian dibanding manual testing. Menerapkan explicit wait strategy untuk elemen dinamis guna menghilangkan flaky test, dan menghasilkan laporan pengujian otomatis (Pytest-HTML).</p>
+        <div class="star-block">
+          <div class="star-line"><span class="k mono" data-i18n="s">Situation</span><span class="v" data-i18n="p3.s">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="t">Task</span><span class="v" data-i18n="p3.t">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="a">Action</span><span class="v" data-i18n="p3.a">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="r">Result</span><span class="v" data-i18n="p3.r">…</span></div>
+        </div>
         <div class="card-links">
           <a href="https://selenium-testing-alpha.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a>
           <a href="https://github.com/jifua/selenium-testing" target="_blank" rel="noopener">GitHub ↗</a>
@@ -123,40 +234,51 @@
         <span class="badge-index mono">08</span>
         <h3>API Testing Project</h3>
         <div class="tag-row"><span class="tag">REST API</span><span class="tag alt">Test Validation</span></div>
-        <p>Proyek pengujian API untuk validasi endpoint dan data — melatih kemampuan API testing dan validasi data di level backend.</p>
-        <div class="card-links">
-          <a href="https://api-testing-rose.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a>
-          <a href="https://github.com/jifua/api-testing" target="_blank" rel="noopener">GitHub ↗</a>
+        <div class="star-block">
+          <div class="star-line"><span class="k mono" data-i18n="s">Situation</span><span class="v" data-i18n="p7.s">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="t">Task</span><span class="v" data-i18n="p7.t">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="a">Action</span><span class="v" data-i18n="p7.a">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="r">Result</span><span class="v" data-i18n="p7.r">…</span></div>
         </div>
+        <div class="card-links"><a href="https://api-testing-rose.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a><a href="https://github.com/jifua/api-testing" target="_blank" rel="noopener">GitHub ↗</a></div>
       </div>
 
       <div class="project-card" data-cat="data">
         <span class="badge-index mono">09</span>
         <h3>Data Analysis Project</h3>
         <div class="tag-row"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag alt">Visualization</span></div>
-        <p>Analisis data eksploratif dan visualisasi menggunakan Python — mengubah data mentah menjadi insight yang mudah dibaca.</p>
-        <div class="card-links">
-          <a href="https://data-analysis-red.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a>
-          <a href="https://github.com/jifua/Data_Analysis" target="_blank" rel="noopener">GitHub ↗</a>
+        <div class="star-block">
+          <div class="star-line"><span class="k mono" data-i18n="s">Situation</span><span class="v" data-i18n="p8.s">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="t">Task</span><span class="v" data-i18n="p8.t">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="a">Action</span><span class="v" data-i18n="p8.a">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="r">Result</span><span class="v" data-i18n="p8.r">…</span></div>
         </div>
+        <div class="card-links"><a href="https://data-analysis-red.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a><a href="https://github.com/jifua/Data_Analysis" target="_blank" rel="noopener">GitHub ↗</a></div>
       </div>
 
       <div class="project-card" data-cat="data">
         <span class="badge-index mono">10</span>
         <h3>Production Analysis Project</h3>
         <div class="tag-row"><span class="tag">Python</span><span class="tag alt">Data Analysis</span></div>
-        <p>Analisis data produksi untuk mendukung pengambilan keputusan berbasis data pada proses operasional.</p>
-        <div class="card-links">
-          <a href="https://production-analysis-project.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a>
-          <a href="https://github.com/jifua/production-analysis-project" target="_blank" rel="noopener">GitHub ↗</a>
+        <div class="star-block">
+          <div class="star-line"><span class="k mono" data-i18n="s">Situation</span><span class="v" data-i18n="p9.s">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="t">Task</span><span class="v" data-i18n="p9.t">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="a">Action</span><span class="v" data-i18n="p9.a">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="r">Result</span><span class="v" data-i18n="p9.r">…</span></div>
         </div>
+        <div class="card-links"><a href="https://production-analysis-project.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a><a href="https://github.com/jifua/production-analysis-project" target="_blank" rel="noopener">GitHub ↗</a></div>
       </div>
 
       <div class="project-card" data-cat="data">
         <span class="badge-index mono">11</span>
         <h3>Wave Simulation — FFT</h3>
         <div class="tag-row"><span class="tag">Python</span><span class="tag alt">Matplotlib</span></div>
-        <p>Simulasi perilaku gelombang menggunakan Fast Fourier Transform dengan visualisasi 3D dan analisis domain frekuensi — akar dari cara berpikir "sinyal" yang saya bawa ke seluruh proyek data & AI.</p>
+        <div class="star-block">
+          <div class="star-line"><span class="k mono" data-i18n="s">Situation</span><span class="v" data-i18n="p10.s">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="t">Task</span><span class="v" data-i18n="p10.t">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="a">Action</span><span class="v" data-i18n="p10.a">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="r">Result</span><span class="v" data-i18n="p10.r">…</span></div>
+        </div>
         <div class="card-links"><span style="color:var(--text-faint);">Project riset akademik</span></div>
       </div>
 
@@ -164,7 +286,12 @@
         <span class="badge-index mono">12</span>
         <h3>Electromagnetic Wave Simulation — FDTD</h3>
         <div class="tag-row"><span class="tag">Python</span><span class="tag alt">Numerical Methods</span></div>
-        <p>Simulasi propagasi gelombang elektromagnetik 1D dengan metode FDTD, termasuk analisis refleksi dan transmisi.</p>
+        <div class="star-block">
+          <div class="star-line"><span class="k mono" data-i18n="s">Situation</span><span class="v" data-i18n="p11.s">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="t">Task</span><span class="v" data-i18n="p11.t">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="a">Action</span><span class="v" data-i18n="p11.a">…</span></div>
+          <div class="star-line"><span class="k mono" data-i18n="r">Result</span><span class="v" data-i18n="p11.r">…</span></div>
+        </div>
         <div class="card-links"><span style="color:var(--text-faint);">Project riset akademik</span></div>
       </div>
 
@@ -185,5 +312,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/i18n.js"></script>
 </body>
 </html>

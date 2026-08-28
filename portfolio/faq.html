@@ -8,75 +8,93 @@
 </head>
 <body>
 
+<script id="i18n-data" type="application/json">
+{
+  "nav.home": {"id":"Home","en":"Home"},
+  "nav.projects": {"id":"Projects","en":"Projects"},
+  "nav.skills": {"id":"Skills","en":"Skills"},
+  "nav.certs": {"id":"Certificates","en":"Certificates"},
+  "nav.careers": {"id":"Careers","en":"Careers"},
+  "nav.faq": {"id":"FAQ","en":"FAQ"},
+  "nav.contact": {"id":"Let's Talk","en":"Let's Talk"},
+  "hero.eyebrow": {"id":"Pertanyaan yang sering muncul","en":"Frequently asked"},
+  "hero.title": {"id":"Pertanyaan yang biasanya ditanyakan recruiter.","en":"Questions recruiters usually ask."},
+  "hero.lede": {"id":"Jawaban langsung, tanpa basa-basi — klik untuk membuka.","en":"Direct answers, no fluff — click to expand."},
+
+  "q1":{"id":"Kenapa lulusan Fisika, bukan Ilmu Komputer?","en":"Why a Physics graduate, not Computer Science?"},
+  "a1":{"id":"Fisika Instrumentasi & Komputasi mengajarkan cara berpikir sistematis: mengukur, memvalidasi, dan memastikan sebuah sistem bisa dipercaya sebelum digunakan — prinsip yang sama persis dibutuhkan dalam software testing, data validation, dan evaluasi model AI. Skill teknis pemrogramannya saya bangun sendiri lewat proyek nyata, bukan cuma teori di kelas.","en":"Physics Instrumentation & Computation teaches a systematic way of thinking: measure, validate, and make sure a system can be trusted before it's used — exactly the principle behind software testing, data validation, and AI model evaluation. I built the programming skills myself through real projects, not just classroom theory."},
+
+  "q2":{"id":"Apakah sudah punya pengalaman kerja di industri teknologi?","en":"Do you have work experience in the tech industry?"},
+  "a2":{"id":"Belum di perusahaan teknologi formal, tapi sudah punya pengalaman riset terapan (magang MBKM di BRIN, membangun model AI hingga deployment ke edge device) dan pengalaman membangun sistem production-grade secara independen (backend API, database, automation testing) yang bisa dicoba langsung lewat live demo di halaman Projects.","en":"Not at a formal tech company yet, but I have applied research experience (MBKM internship at BRIN, building an AI model through edge-device deployment) and experience building production-grade systems independently (backend APIs, databases, automation testing) that you can try directly via the live demos on the Projects page."},
+
+  "q3":{"id":"Role mana yang paling ingin dilamar?","en":"Which role are you most interested in?"},
+  "a3":{"id":"Terbuka untuk AI Engineer, Software Engineer, Data Engineer, Data Analyst, maupun QA/Automation Engineer — lihat kecocokan spesifik tiap role di halaman Careers. Prioritas fleksibel tergantung kebutuhan tim dan peluang berkembang di dalamnya.","en":"Open to AI Engineer, Software Engineer, Data Engineer, Data Analyst, or QA/Automation Engineer — see the specific fit for each role on the Careers page. Priority is flexible depending on team needs and growth opportunity."},
+
+  "q4":{"id":"Berdomisili di mana, dan apakah bersedia relokasi atau kerja remote?","en":"Where are you based, and are you open to relocation or remote work?"},
+  "a4":{"id":"Berdomisili di Batam, Kepulauan Riau. Terbuka untuk relokasi maupun kerja remote — silakan diskusikan detail lewat halaman Let's Talk.","en":"Based in Batam, Riau Islands, Indonesia. Open to relocation and remote work — happy to discuss details via the Let's Talk page."},
+
+  "q5":{"id":"Bagaimana proses belajar programming dan AI dilakukan tanpa latar belakang formal CS?","en":"How did you learn programming and AI without a formal CS background?"},
+  "a5":{"id":"Kombinasi kursus terstruktur (IBM, Microsoft, DQLab — lihat halaman Certificates) dengan proyek mandiri yang jauh lebih intensif: membangun backend production, deployment model AI ke edge device, hingga automation testing. Belajar dengan langsung membangun sesuatu yang nyata, bukan sekadar menyelesaikan modul.","en":"A combination of structured courses (IBM, Microsoft, DQLab — see the Certificates page) and much more intensive self-directed projects: building production backends, deploying AI models to edge devices, and automation testing. Learning by building something real, not just finishing modules."},
+
+  "q6":{"id":"Apa pencapaian teknis yang paling dibanggakan?","en":"What's the technical achievement you're most proud of?"},
+  "a6":{"id":"Membawa satu model deep learning dari notebook riset sampai berjalan real-time di perangkat fisik: melatih CNN hingga 98% akurasi pada 8.000+ gambar daun tomat, lalu mengonversi dan men-deploy-nya ke Raspberry Pi 5 dengan Hailo AI Kit — mencapai 100% akurasi pada data lapangan. Ini mempertemukan langsung latar belakang instrumentasi dengan kemampuan AI engineering.","en":"Taking a deep learning model from a research notebook to running real-time on physical hardware: training a CNN to 98% accuracy on 8,000+ tomato leaf images, then converting and deploying it to a Raspberry Pi 5 with a Hailo AI Kit — reaching 100% accuracy on field data. It directly connects my instrumentation background with AI engineering ability."},
+
+  "q7":{"id":"Apakah tersedia CV dalam format yang bisa diunduh?","en":"Is your CV available to download?"},
+  "a7":{"id":"Ya — CV tersedia dalam tiga versi sesuai fokus role (AI Engineer, Software Engineer, QA Automation) dan bisa diunduh langsung dari halaman Careers masing-masing bagian role.","en":"Yes — the CV is available in three versions matching each role focus (AI Engineer, Software Engineer, QA Automation), downloadable directly from each role's section on the Careers page."},
+
+  "more.title":{"id":"Masih ada pertanyaan lain?","en":"Still have questions?"},
+  "more.lede":{"id":"Langsung saja hubungi lewat email atau isi form singkat di halaman Let's Talk.","en":"Feel free to reach out by email or fill in the short form on the Let's Talk page."},
+  "more.cta":{"id":"Let's Talk →","en":"Let's Talk →"}
+}
+</script>
+
 <header class="nav">
   <div class="nav-inner">
     <a href="index.html" class="logo"><span class="dot"></span>FITRIA ROZI</a>
     <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="certificates.html">Certificates</a>
-      <a href="careers.html">Careers</a>
-      <a href="faq.html" class="active">FAQ</a>
-      <a href="contact.html">Let's Talk</a>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="projects.html" data-i18n="nav.projects">Projects</a>
+      <a href="skills.html" data-i18n="nav.skills">Skills</a>
+      <a href="certificates.html" data-i18n="nav.certs">Certificates</a>
+      <a href="careers.html" data-i18n="nav.careers">Careers</a>
+      <a href="faq.html" class="active" data-i18n="nav.faq">FAQ</a>
+      <a href="contact.html" data-i18n="nav.contact">Let's Talk</a>
     </nav>
-    <div class="nav-cta"><a href="contact.html" class="btn primary">Let's Talk</a></div>
+    <div class="nav-cta">
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="id">ID</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a href="contact.html" class="btn primary" data-i18n="nav.contact">Let's Talk</a>
+    </div>
   </div>
 </header>
 
 <section class="page-hero">
   <div class="wrap" style="max-width:760px;">
-    <div class="eyebrow">Pertanyaan yang sering muncul</div>
-    <h1>Pertanyaan yang biasanya ditanyakan recruiter.</h1>
-    <p class="lede">Jawaban langsung, tanpa basa-basi — klik untuk membuka.</p>
+    <div class="eyebrow" data-i18n="hero.eyebrow">Pertanyaan yang sering muncul</div>
+    <h1 data-i18n="hero.title">Pertanyaan yang biasanya ditanyakan recruiter.</h1>
+    <p class="lede" data-i18n="hero.lede">Jawaban langsung, tanpa basa-basi.</p>
   </div>
 </section>
 
 <section style="padding-top:0;">
   <div class="wrap" style="max-width:760px;">
-
-    <div class="faq-item">
-      <div class="faq-q">Kenapa lulusan Fisika, bukan Ilmu Komputer?<span class="plus">+</span></div>
-      <div class="faq-a"><p>Fisika Instrumentasi mengajarkan cara berpikir sistematis: mengukur, memvalidasi, dan memastikan sebuah sistem bisa dipercaya sebelum digunakan — prinsip yang sama persis dibutuhkan dalam software testing, data validation, dan evaluasi model AI. Skill teknis pemrogramannya saya bangun sendiri lewat proyek nyata (lihat halaman <a href="projects.html" style="color:var(--cyan);">Projects</a>), bukan cuma teori di kelas.</p></div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Apakah sudah punya pengalaman kerja di industri teknologi?<span class="plus">+</span></div>
-      <div class="faq-a"><p>Belum di perusahaan teknologi formal, tapi sudah punya pengalaman riset terapan (magang MBKM di BRIN, membangun model AI hingga deployment ke edge device) dan pengalaman membangun sistem production-grade secara independen (backend API, database, automation testing) yang bisa dicoba langsung lewat live demo di halaman <a href="projects.html" style="color:var(--cyan);">Projects</a>.</p></div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Role mana yang paling ingin dilamar?<span class="plus">+</span></div>
-      <div class="faq-a"><p>Terbuka untuk AI Engineer, Software Engineer, Data Engineer, Data Analyst, maupun QA/Automation Engineer — lihat kecocokan spesifik tiap role di halaman <a href="careers.html" style="color:var(--cyan);">Careers</a>. Prioritas fleksibel tergantung kebutuhan tim dan peluang berkembang di dalamnya.</p></div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Berdomisili di mana, dan apakah bersedia relokasi atau kerja remote?<span class="plus">+</span></div>
-      <div class="faq-a"><p>Berdomisili di Batam, Kepulauan Riau. Terbuka untuk relokasi maupun kerja remote — silakan diskusikan detail lewat halaman <a href="contact.html" style="color:var(--cyan);">Let's Talk</a>.</p></div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Bagaimana proses belajar programming dan AI dilakukan tanpa latar belakang formal CS?<span class="plus">+</span></div>
-      <div class="faq-a"><p>Kombinasi kursus terstruktur (IBM, Microsoft, DQLab — lihat halaman <a href="certificates.html" style="color:var(--cyan);">Certificates</a>) dengan proyek mandiri yang jauh lebih intensif: membangun backend production, deployment model AI ke edge device, hingga automation testing. Belajar dengan langsung membangun sesuatu yang nyata, bukan sekadar menyelesaikan modul.</p></div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Apa pencapaian teknis yang paling dibanggakan?<span class="plus">+</span></div>
-      <div class="faq-a"><p>Membawa satu model deep learning dari notebook riset sampai berjalan real-time di perangkat fisik: melatih CNN hingga 98% akurasi pada 8.000+ gambar daun tomat, lalu mengonversi dan men-deploy-nya ke Raspberry Pi 5 dengan Hailo AI Kit — mencapai 100% akurasi pada data lapangan. Ini mempertemukan langsung latar belakang instrumentasi dengan kemampuan AI engineering.</p></div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Apakah tersedia CV dalam format yang bisa diunduh?<span class="plus">+</span></div>
-      <div class="faq-a"><p>Ya — CV tersedia dalam tiga versi sesuai fokus role (AI Engineer, Software Engineer, QA Automation) dan bisa diunduh langsung dari halaman <a href="careers.html" style="color:var(--cyan);">Careers</a> masing-masing bagian role.</p></div>
-    </div>
-
+    <div class="faq-item"><div class="faq-q"><span data-i18n="q1">…</span><span class="plus">+</span></div><div class="faq-a"><p data-i18n="a1">…</p></div></div>
+    <div class="faq-item"><div class="faq-q"><span data-i18n="q2">…</span><span class="plus">+</span></div><div class="faq-a"><p data-i18n="a2">…</p></div></div>
+    <div class="faq-item"><div class="faq-q"><span data-i18n="q3">…</span><span class="plus">+</span></div><div class="faq-a"><p data-i18n="a3">…</p></div></div>
+    <div class="faq-item"><div class="faq-q"><span data-i18n="q4">…</span><span class="plus">+</span></div><div class="faq-a"><p data-i18n="a4">…</p></div></div>
+    <div class="faq-item"><div class="faq-q"><span data-i18n="q5">…</span><span class="plus">+</span></div><div class="faq-a"><p data-i18n="a5">…</p></div></div>
+    <div class="faq-item"><div class="faq-q"><span data-i18n="q6">…</span><span class="plus">+</span></div><div class="faq-a"><p data-i18n="a6">…</p></div></div>
+    <div class="faq-item"><div class="faq-q"><span data-i18n="q7">…</span><span class="plus">+</span></div><div class="faq-a"><p data-i18n="a7">…</p></div></div>
   </div>
 </section>
 
 <section style="padding-top:20px;">
   <div class="wrap" style="max-width:760px; text-align:center; border:1px solid var(--line); border-radius:var(--radius); padding:48px 32px; background:var(--panel);">
-    <h2>Masih ada pertanyaan lain?</h2>
-    <p class="lede" style="margin:0 auto 24px;">Langsung saja hubungi lewat email atau isi form singkat di halaman Let's Talk.</p>
-    <a href="contact.html" class="btn primary">Let's Talk →</a>
+    <h2 data-i18n="more.title">Masih ada pertanyaan lain?</h2>
+    <p class="lede" style="margin:0 auto 24px;" data-i18n="more.lede">Langsung saja hubungi lewat email.</p>
+    <a href="contact.html" class="btn primary" data-i18n="more.cta">Let's Talk →</a>
   </div>
 </section>
 
@@ -93,5 +111,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/i18n.js"></script>
 </body>
 </html>

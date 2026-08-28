@@ -10,6 +10,38 @@ document.addEventListener('DOMContentLoaded', () => {
     burger.addEventListener('click', () => links.classList.toggle('open'));
   }
 
+  /* ---------- Language toggle (ID / EN) ---------- */
+  const langToggle = document.getElementById('lang-toggle');
+  if (langToggle) {
+    const idBtn = langToggle.querySelector('.lang-id-btn');
+    const enBtn = langToggle.querySelector('.lang-en-btn');
+    const setLang = (lang) => {
+      document.documentElement.classList.toggle('lang-en', lang === 'en');
+      idBtn.classList.toggle('active', lang !== 'en');
+      enBtn.classList.toggle('active', lang === 'en');
+      localStorage.setItem('lang', lang);
+    };
+    idBtn.addEventListener('click', () => setLang('id'));
+    enBtn.addEventListener('click', () => setLang('en'));
+    setLang(localStorage.getItem('lang') === 'en' ? 'en' : 'id');
+  }
+
+  /* ---------- Skill bar animation ---------- */
+  const bars = document.querySelectorAll('.bar-fill');
+  if (bars.length && 'IntersectionObserver' in window) {
+    const barIo = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.width = e.target.dataset.pct + '%';
+          barIo.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    bars.forEach(b => barIo.observe(b));
+  } else {
+    bars.forEach(b => b.style.width = b.dataset.pct + '%');
+  }
+
   /* ---------- Scroll reveal ---------- */
   const revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
